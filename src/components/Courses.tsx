@@ -42,7 +42,7 @@ const courses = [
 
 export default function Courses() {
   return (
-    <div className="bento-card h-full">
+    <div id="courses" className="bento-card h-full scroll-mt-20">
       <h3 className="font-bold text-xl mb-6 text-brand-navy">Our Professional Courses</h3>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-grow">

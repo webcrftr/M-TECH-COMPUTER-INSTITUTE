@@ -1,4 +1,5 @@
-import { Phone, Mail, MapPin, Instagram, Facebook, Youtube } from 'lucide-react';
+import { Instagram, Facebook, Youtube } from 'lucide-react';
+import { Link, NavLink } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -6,12 +7,12 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           <div className="bento-card">
-            <div className="flex flex-col mb-4">
+            <Link to="/" className="flex flex-col mb-4">
               <span className="font-display text-xl font-bold text-brand-navy leading-none">M TECH</span>
               <span className="text-[10px] font-semibold tracking-widest text-brand-orange uppercase">Computer Institute</span>
-            </div>
+            </Link>
             <p className="text-xs text-slate-500 leading-relaxed mb-6">
-              Empowering Naigaon with digital excellence for over a decade.
+              Empowering Naigaon with digital excellence for over a decade. Join 1000+ students who have transformed their careers with us.
             </p>
             <div className="flex gap-2">
               {[Instagram, Facebook, Youtube].map((Icon, i) => (
@@ -23,17 +24,21 @@ export default function Footer() {
           </div>
           
           <div className="bento-card bg-brand-navy text-white">
-            <h3 className="font-bold text-xs uppercase tracking-widest opacity-60 mb-6">Quick Links</h3>
+            <h3 className="font-bold text-xs uppercase tracking-widest opacity-60 mb-6">Explore</h3>
             <ul className="grid grid-cols-2 gap-4 text-[10px] font-bold uppercase tracking-wider">
-              <li><a href="#" className="hover:text-brand-orange">Home</a></li>
-              <li><a href="#courses" className="hover:text-brand-orange">Courses</a></li>
-              <li><a href="#about" className="hover:text-brand-orange">Benefits</a></li>
-              <li><a href="#contact" className="hover:text-brand-orange">Reviews</a></li>
+              <li><Link to="/" className="hover:text-brand-orange transition-colors">Home</Link></li>
+              <li><Link to="/courses" className="hover:text-brand-orange transition-colors">Courses</Link></li>
+              <li><Link to="/benefits" className="hover:text-brand-orange transition-colors">Benefits</Link></li>
+              <li><Link to="/about" className="hover:text-brand-orange transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="hover:text-brand-orange transition-colors">Contact</Link></li>
             </ul>
           </div>
           
           <div className="bento-card">
-            <h3 className="font-bold text-xs uppercase tracking-widest text-slate-400 mb-6">Find Us</h3>
+            <h3 className="font-bold text-xs uppercase tracking-widest text-slate-400 mb-6">Location</h3>
+            <p className="text-[10px] font-bold text-brand-navy leading-relaxed mb-4 uppercase tracking-tighter">
+              Don Bosco Rd, opp. Ishan Hospital, Naigaon East, Vasai-Virar, MH 401208
+            </p>
             <div className="rounded-xl overflow-hidden h-32 border border-slate-100 grayscale hover:grayscale-0 transition-all">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15053.816698656157!2d72.84687535!3d19.34994275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a5a8726be62f%3A0x6b2b7324869485b!2sM%20Tech%20Computer%20Institute!5e0!3m2!1sen!2sin!4v1713721873041!5m2!1sen!2sin" 

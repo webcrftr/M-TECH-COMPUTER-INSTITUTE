@@ -1,5 +1,6 @@
 import { Star, ArrowRight, PlayCircle } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
@@ -20,22 +21,22 @@ export default function Hero() {
             Master Digital Skills & <span className="text-brand-orange">Build Your Career</span>
           </h1>
           <p className="opacity-90 text-lg mb-8 leading-relaxed">
-            Top-rated computer training center in Naigaon East. Join 100+ successful students today and transform your future.
+            Top-rated computer training center in Naigaon East. Join 1000+ successful students today and transform your future.
           </p>
           
           <div className="flex flex-wrap gap-4 mt-auto relative z-10">
-            <a 
-              href="#contact" 
+            <Link 
+              to="/contact" 
               className="bg-brand-orange text-white px-8 py-3 rounded-xl font-bold text-lg hover:shadow-xl hover:-translate-y-1 transition-all"
             >
               Book Free Demo
-            </a>
-            <a 
-              href="#courses" 
-              className="bg-white/10 border border-white/30 backdrop-blur-sm text-white px-8 py-3 rounded-xl font-bold text-lg hover:bg-white/20 transition-all"
+            </Link>
+            <Link 
+              to="/courses" 
+              className="bg-white/10 border border-white/30 backdrop-blur-sm text-white px-8 py-3 rounded-xl font-bold text-lg hover:bg-white/20 transition-all text-center"
             >
               View Courses
-            </a>
+            </Link>
           </div>
         </div>
         

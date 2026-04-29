@@ -21,7 +21,7 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="bento-card h-full justify-center text-center">
+      <div id="contact" className="bento-card h-full justify-center text-center scroll-mt-20">
         <div className="w-16 h-16 bg-brand-green/20 text-brand-green rounded-full flex items-center justify-center mx-auto mb-6">
           <Send size={32} />
         </div>
@@ -38,7 +38,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bento-card h-full">
+    <div id="contact" className="bento-card h-full scroll-mt-20">
       <h4 className="font-bold text-center mb-6 text-brand-navy">Get Free Career Consultation</h4>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <div>

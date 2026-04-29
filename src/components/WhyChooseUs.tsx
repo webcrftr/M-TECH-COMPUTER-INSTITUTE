@@ -31,7 +31,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <div className="bento-card bg-white">
+    <div id="benefits" className="bento-card bg-white scroll-mt-20">
       <h4 className="font-bold mb-6 text-sm uppercase text-slate-400 tracking-widest flex items-center gap-2">
         <CheckCircle size={16} className="text-brand-green" /> Why Us?
       </h4>
