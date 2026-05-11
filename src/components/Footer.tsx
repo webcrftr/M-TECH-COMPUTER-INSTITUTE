@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Youtube, MapPin, Phone, Mail } from 'lucide-react';
+import { Instagram, Facebook, Youtube, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -22,11 +22,15 @@ export default function Footer() {
               Empowering Naigaon with digital excellence for over 3+ years. Join 300+ students who have transformed their careers with us.
             </p>
             <div className="flex gap-3">
-              {[Instagram, Facebook, Youtube].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 hover:bg-brand-orange hover:text-white transition-all shadow-sm">
-                  <Icon size={18} />
-                </a>
-              ))}
+              <a href="https://instagram.com/mhatre_tech" target="_blank" rel="noreferrer" className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 hover:bg-brand-orange hover:text-white transition-all shadow-sm">
+                <Instagram size={18} />
+              </a>
+              <a href="#" className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 hover:bg-brand-orange hover:text-white transition-all shadow-sm">
+                <Facebook size={18} />
+              </a>
+              <a href="#" className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 hover:bg-brand-orange hover:text-white transition-all shadow-sm">
+                <Youtube size={18} />
+              </a>
             </div>
           </div>
           
@@ -77,7 +81,14 @@ export default function Footer() {
               </div>
               <div className="flex gap-4">
                 <Mail size={18} className="text-brand-orange flex-shrink-0" />
-                <p className="text-sm font-bold text-slate-500">info@mtechinstitute.in</p>
+                <a href="mailto:mhatretech0@gmail.com" className="text-sm font-bold text-slate-500 hover:text-brand-orange transition-colors">mhatretech0@gmail.com</a>
+              </div>
+              <div className="mt-4 pt-4 border-t border-slate-100">
+                 <div className="text-[10px] font-black text-brand-navy uppercase tracking-widest mb-2">Class Timing</div>
+                 <div className="text-sm font-bold text-slate-500 flex items-center gap-2">
+                    <Clock size={14} className="text-brand-orange" />
+                    9:00 AM – 6:00 PM
+                 </div>
               </div>
             </div>
           </div>
@@ -85,7 +96,7 @@ export default function Footer() {
         
         <div className="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-slate-400 text-[10px] font-black uppercase tracking-widest">
-            © {new Date().getFullYear()} M Tech Computer Institute. All Rights Reserved.
+            © 2026 M Tech Computer Institute • All Rights Reserved
           </p>
           <div className="flex gap-8">
             <a href="#" className="text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-brand-orange transition-colors">Privacy Policy</a>

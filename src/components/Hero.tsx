@@ -1,4 +1,4 @@
-import { Star, CheckCircle, GraduationCap, Award, Users } from 'lucide-react';
+import { Star, CheckCircle, GraduationCap, Award, Users, Clock } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
@@ -39,18 +39,23 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-12">
-              <Link 
-                to="/contact" 
+              <a 
+                href="https://wa.me/917755909266?text=Hello%20M%20Tech%20Computer%20Institute%2C%20I%20want%20to%20book%20a%20free%20demo%20session."
+                target="_blank"
+                rel="noreferrer"
                 className="bg-brand-orange text-white px-10 py-5 rounded-2xl font-black text-lg shadow-[0_15px_30px_-5px_rgba(249,115,22,0.4)] hover:shadow-[0_20px_40px_-5px_rgba(249,115,22,0.5)] hover:-translate-y-1.5 transition-all duration-300 flex items-center gap-3"
               >
                 Book Free Demo
-              </Link>
-              <Link 
-                to="/courses" 
+              </a>
+              <button 
+                onClick={() => {
+                  const el = document.getElementById('courses');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="bg-white/5 border border-white/10 backdrop-blur-md text-white px-10 py-5 rounded-2xl font-black text-lg hover:bg-white/10 hover:-translate-y-1.5 transition-all duration-300"
               >
                 View Courses
-              </Link>
+              </button>
             </div>
 
             {/* Trust Badges */}
@@ -60,8 +65,8 @@ export default function Hero() {
                 <span className="text-xs font-bold uppercase tracking-wider">300+ Students</span>
               </div>
               <div className="flex items-center gap-2 text-white/70">
-                <CheckCircle size={20} className="text-brand-green" />
-                <span className="text-xs font-bold uppercase tracking-wider">3+ Years Exp.</span>
+                <Clock size={20} className="text-brand-orange" />
+                <span className="text-xs font-bold uppercase tracking-wider">9 AM – 6 PM</span>
               </div>
               <div className="flex items-center gap-2 text-white/70">
                 <CheckCircle size={20} className="text-brand-green" />
@@ -79,7 +84,7 @@ export default function Hero() {
                 <img 
                   src="/lab.jpg" 
                   alt="M Tech Computer Lab" 
-                  className="w-full h-full object-cover opacity-60 mix-blend-overlay"
+                  className="w-full h-full object-cover opacity-40 mix-blend-overlay scale-110 group-hover:scale-100 transition-transform duration-1000"
                   referrerPolicy="no-referrer"
                 />
                 
@@ -88,15 +93,15 @@ export default function Hero() {
                   initial={{ x: 20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 1 }}
-                  className="absolute bottom-8 right-8 bg-white p-6 rounded-3xl shadow-2xl flex flex-col items-center gap-1 border border-slate-100"
+                  className="absolute bottom-8 right-8 bg-white/10 backdrop-blur-md p-6 rounded-3xl shadow-2xl flex flex-col items-center gap-1 border border-white/20"
                 >
                   <div className="flex items-center gap-1 text-brand-navy mb-1">
                     {[1, 2, 3, 4, 5].map((s) => (
-                      <Star key={s} size={16} fill="#F97316" className="text-brand-orange" />
+                      <Star key={s} size={14} fill="#F97316" className="text-brand-orange" />
                     ))}
                   </div>
-                  <div className="text-2xl font-black text-brand-navy">4.9</div>
-                  <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Google Rating</div>
+                  <div className="text-2xl font-black text-white">4.9</div>
+                  <div className="text-[9px] font-black text-white/50 uppercase tracking-widest leading-none">Google Rating</div>
                 </motion.div>
 
                 {/* Floating Tech Badges */}

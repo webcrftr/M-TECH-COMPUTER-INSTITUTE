@@ -4,12 +4,13 @@ import WhyChooseUs from '../components/WhyChooseUs';
 import Testimonials from '../components/Testimonials';
 import Gallery from '../components/Gallery';
 import ContactForm from '../components/ContactForm';
+import VideoSection from '../components/VideoSection';
 import { motion } from 'motion/react';
-import { MapPin, Phone, Clock, MessageCircle, Star, GraduationCap, Users, Trophy } from 'lucide-react';
+import { MapPin, Phone, Clock, MessageCircle, Star, GraduationCap, Users, Trophy, Mail, Instagram } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-20 lg:gap-32 pb-20">
+    <div id="home" className="flex flex-col gap-20 lg:gap-32 pb-20">
       {/* Hero Section */}
       <div className="container mx-auto px-4 pt-8 h-[calc(100vh-120px)] min-h-[600px]">
         <Hero />
@@ -25,15 +26,18 @@ export default function Home() {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-orange mb-4">Our Legacy</h2>
+              <div className="inline-flex items-center gap-2 bg-brand-orange/10 text-brand-orange px-4 py-2 rounded-2xl mb-4 border border-brand-orange/20">
+                <Trophy size={16} />
+                <span className="text-[10px] font-black uppercase tracking-[0.2em]">Trusted Institute in Naigaon</span>
+              </div>
               <h3 className="text-4xl md:text-5xl font-black text-brand-navy leading-tight">
-                About M Tech <br />
-                Computer Institute
+                Empowering Minds <br />
+                Since 3+ Years
               </h3>
             </div>
             
             <p className="text-lg text-slate-500 leading-relaxed font-medium">
-              M Tech Computer Institute is a trusted computer training center in Naigaon East focused on practical skills, professional development, and career growth. Over the last 3+ years, we have successfully trained 300+ students with quality education and hands-on learning.
+              M Tech Computer Institute is more than just a training center; it's a launchpad for your digital career. Located in the heart of Naigaon East, we provide a modern learning environment with personalized attention to every student.
             </p>
 
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
@@ -41,40 +45,42 @@ export default function Home() {
                 <div className="text-3xl font-black text-brand-navy">300+</div>
                 <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Students Trained</div>
               </div>
+              <div className="space-y-1 text-brand-orange">
+                <div className="text-3xl font-black">100%</div>
+                <div className="text-[10px] font-bold uppercase tracking-widest opacity-60">Practical Focus</div>
+              </div>
               <div className="space-y-1">
                 <div className="text-3xl font-black text-brand-navy">3+</div>
                 <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Years Excellence</div>
               </div>
-              <div className="space-y-1">
-                <div className="text-3xl font-black text-brand-navy">6+</div>
-                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Pro Courses</div>
-              </div>
+            </div>
+            
+            <div className="pt-4 flex flex-wrap gap-4">
+               <a href="#courses" className="bg-brand-navy text-white px-8 py-4 rounded-2xl font-black text-sm hover:bg-brand-orange transition-colors">Start Learning</a>
+               <a href="https://instagram.com/mhatre_tech" target="_blank" rel="noreferrer" className="flex items-center gap-3 border border-slate-200 px-8 py-4 rounded-2xl font-black text-sm text-brand-navy hover:bg-slate-50 transition-colors">
+                  <Instagram size={18} className="text-brand-orange" />
+                  Follow Us
+               </a>
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-4">
-              <div className="bento-card bg-orange-50/50 p-8 flex flex-col items-center text-center overflow-hidden relative group">
-                <img src="/reception.jpg" alt="Reception" className="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity" />
-                <Users className="text-brand-orange mb-4 relative z-10" size={32} />
-                <div className="font-black text-brand-navy relative z-10">Personal Mentorship</div>
-              </div>
-              <div className="bento-card accent-navy p-8 flex flex-col items-center text-center">
-                <Trophy className="text-brand-orange mb-4" size={32} />
-                <div className="font-black">Award Winning</div>
-              </div>
-            </div>
-            <div className="pt-12 space-y-4">
-              <div className="bento-card border-slate-100 p-8 flex flex-col items-center text-center">
-                <GraduationCap className="text-brand-blue mb-4" size={32} />
-                <div className="font-black text-brand-navy">Certified Learning</div>
-              </div>
-              <div className="bento-card bg-slate-50 p-8 flex flex-col items-center text-center overflow-hidden relative group">
-                <img src="/office.jpg" alt="Office" className="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity" />
-                <Star className="text-yellow-500 mb-4 relative z-10" size={32} fill="currentColor" />
-                <div className="font-black text-brand-navy relative z-10">4.9/5 Rating</div>
-              </div>
-            </div>
+          <div className="relative">
+             <motion.div 
+               initial={{ opacity: 0, scale: 0.9 }}
+               whileInView={{ opacity: 1, scale: 1 }}
+               viewport={{ once: true }}
+               className="relative z-10 rounded-[48px] overflow-hidden shadow-2xl border-8 border-white"
+             >
+                <img src="/office.jpg" alt="M Tech Counseling Cabin" className="w-full aspect-[4/5] object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent"></div>
+                <div className="absolute bottom-8 left-8 right-8 bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/20">
+                   <div className="text-white font-black text-xl mb-1">Expert Career Guidance</div>
+                   <p className="text-white/80 text-xs font-medium">Free counseling sessions available daily from 9 AM to 6 PM.</p>
+                </div>
+             </motion.div>
+             {/* Decorative blob */}
+             <div className="absolute -top-12 -right-12 w-64 h-64 bg-brand-orange/20 rounded-full blur-[100px] -z-10"></div>
+             <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-brand-blue/20 rounded-full blur-[100px] -z-10"></div>
           </div>
         </div>
       </section>
@@ -98,10 +104,15 @@ export default function Home() {
       </section>
 
       {/* Gallery Section */}
-      <Gallery />
+      <section id="gallery" className="scroll-mt-24">
+        <Gallery />
+      </section>
+
+      {/* Video Tour Section */}
+      <VideoSection />
 
       {/* Testimonials */}
-      <section className="bg-slate-50 py-24">
+      <section id="testimonials" className="bg-slate-50 py-24 scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/3">
@@ -165,18 +176,41 @@ export default function Home() {
                      </p>
                   </div>
                </div>
-            </div>
+                <div className="flex gap-6">
+                   <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/10 flex-shrink-0">
+                      <Mail className="text-brand-orange" />
+                   </div>
+                   <div>
+                      <div className="text-[10px] font-black uppercase tracking-widest opacity-50 mb-1">Email Us</div>
+                      <a href="mailto:mhatretech0@gmail.com" className="font-black text-lg md:text-xl hover:text-brand-orange transition-colors break-all">
+                         mhatretech0@gmail.com
+                      </a>
+                   </div>
+                </div>
 
-            <div className="mt-12 pt-12 border-t border-white/10">
-               <a 
-                 href="https://wa.me/917755909266" 
-                 className="flex items-center justify-center gap-3 bg-[#25D366] text-white py-5 rounded-2xl font-black text-sm hover:scale-[1.02] transition-transform"
-               >
-                 <MessageCircle size={20} />
-                 WhatsApp Us Now
-               </a>
+                <div className="flex gap-6">
+                   <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/10 flex-shrink-0">
+                      <Instagram className="text-brand-orange" />
+                   </div>
+                   <div>
+                      <div className="text-[10px] font-black uppercase tracking-widest opacity-50 mb-1">Social Media</div>
+                      <a href="https://instagram.com/mhatre_tech" target="_blank" rel="noreferrer" className="font-black text-2xl hover:text-brand-orange transition-colors">
+                         @mhatre_tech
+                      </a>
+                   </div>
+                </div>
+              </div>
+
+              <div className="mt-12 pt-12 border-t border-white/10">
+                 <a 
+                   href="https://wa.me/917755909266" 
+                   className="flex items-center justify-center gap-3 bg-[#25D366] text-white py-5 rounded-2xl font-black text-sm hover:scale-[1.02] transition-transform"
+                 >
+                   <MessageCircle size={20} />
+                   WhatsApp Us Now
+                 </a>
+              </div>
             </div>
-          </div>
 
           {/* Form and Map Side */}
           <div className="lg:w-3/5 p-10 lg:p-16 flex flex-col bg-white">

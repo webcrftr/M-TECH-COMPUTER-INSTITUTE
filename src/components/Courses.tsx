@@ -35,14 +35,6 @@ const courses = [
     topics: ["HTML/CSS", "JavaScript", "React JS", "Node.js", "MongoDB"]
   },
   {
-    title: "Digital Marketing",
-    duration: "3 Months",
-    desc: "Master modern skills: SEO, Social Media Marketing, and Online Advertising.",
-    icon: <Megaphone className="text-amber-500" />,
-    badge: "Career Oriented",
-    topics: ["SEO", "SM Marketing", "Google Ads", "Content Strategy"]
-  },
-  {
     title: "Graphic Designing",
     duration: "4 Months",
     desc: "Creative design with Photoshop, Illustrator & CorelDraw for brand identity.",
@@ -132,9 +124,14 @@ export default function Courses() {
               </div>
             )}
             
-            <button className="w-full bg-brand-navy text-white text-xs font-black py-5 rounded-2xl transition-all uppercase tracking-[0.2em] shadow-xl shadow-brand-navy/10 hover:bg-brand-orange hover:shadow-brand-orange/20 active:scale-95 flex items-center justify-center gap-2">
+            <a 
+              href={`https://wa.me/917755909266?text=${encodeURIComponent(`Hello M Tech Computer Institute, I want to enquire about the ${course.title} course.`)}`}
+              target="_blank"
+              rel="noreferrer"
+              className="w-full bg-brand-navy text-white text-xs font-black py-5 rounded-2xl transition-all uppercase tracking-[0.2em] shadow-xl shadow-brand-navy/10 hover:bg-brand-orange hover:shadow-brand-orange/20 active:scale-95 flex items-center justify-center gap-2"
+            >
               Enroll Now <ArrowRight size={14} />
-            </button>
+            </a>
           </motion.div>
         ))}
       </div>

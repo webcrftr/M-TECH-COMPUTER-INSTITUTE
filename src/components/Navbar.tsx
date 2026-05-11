@@ -4,22 +4,37 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function Navbar() {
+  const [activeSection, setActiveSection] = useState('home');
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+      
+      const sections = ['home', 'about', 'courses', 'benefits', 'contact'];
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navLinks = [
-    { title: 'Home', href: '#home' },
-    { title: 'About', href: '#about' },
-    { title: 'Courses', href: '#courses' },
-    { title: 'Benefits', href: '#benefits' },
-    { title: 'Contact', href: '#contact' },
+    { title: 'Home', href: '#home', id: 'home' },
+    { title: 'About', href: '#about', id: 'about' },
+    { title: 'Courses', href: '#courses', id: 'courses' },
+    { title: 'Benefits', href: '#benefits', id: 'benefits' },
+    { title: 'Contact', href: '#contact', id: 'contact' },
   ];
 
   const handleNavClick = (e: any, href: string) => {
@@ -28,16 +43,26 @@ export default function Navbar() {
       const targetId = href.replace('#', '');
       const target = document.getElementById(targetId);
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
+        const offset = 80;
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
         setIsOpen(false);
       }
     }
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
-      scrolled ? 'py-3' : 'py-6'
-    }`}>
+    <>
+      <div className="bg-brand-orange text-white py-2 text-center text-[10px] font-black uppercase tracking-[0.2em] sticky top-0 z-[110] flex items-center justify-center gap-4 px-4 overflow-hidden whitespace-nowrap">
+        <span className="animate-pulse">● Admissions Open</span>
+        <span className="hidden sm:inline">Classes Running Daily</span>
+        <span className="bg-white/20 px-3 py-0.5 rounded-full backdrop-blur-md">Timing: 9:00 AM – 6:00 PM</span>
+        <span className="hidden lg:inline animate-pulse">● Limited Seats Available</span>
+      </div>
+
+      <nav className={`fixed top-[34px] left-0 right-0 z-[100] transition-all duration-500 ${
+        scrolled ? 'py-3' : 'py-6'
+      }`}>
       <div className="container mx-auto px-4">
         <div className={`rounded-[32px] px-8 py-3 flex items-center justify-between transition-all duration-500 border border-slate-100 ${
           scrolled ? 'bg-white/80 backdrop-blur-xl shadow-xl shadow-slate-200/20' : 'bg-white shadow-lg'
@@ -54,7 +79,9 @@ export default function Navbar() {
                 key={link.title}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-[11px] font-black uppercase tracking-widest text-slate-500 hover:text-brand-orange transition-colors"
+                className={`text-[11px] font-black uppercase tracking-widest transition-all ${
+                  activeSection === link.id ? 'text-brand-orange scale-110' : 'text-slate-500 hover:text-brand-orange'
+                }`}
               >
                 {link.title}
               </a>
@@ -116,5 +143,6 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </nav>
+    </>
   );
 }

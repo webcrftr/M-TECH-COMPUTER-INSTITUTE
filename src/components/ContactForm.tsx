@@ -15,8 +15,15 @@ export default function ContactForm() {
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<FormData>();
   
   const onSubmit = async (data: FormData) => {
-    console.log(data);
-    await new Promise(r => setTimeout(r, 1500));
+    // Format the message for WhatsApp
+    const message = `Hello M Tech Computer Institute,\n\nI am interested in the ${data.course} course.\n\nName: ${data.name}\nPhone: ${data.phone}\nMessage: ${data.message || 'N/A'}`;
+    const whatsappUrl = `https://wa.me/917755909266?text=${encodeURIComponent(message)}`;
+    
+    // Simulate server side processing
+    await new Promise(r => setTimeout(r, 1000));
+    
+    // Redirect to WhatsApp
+    window.open(whatsappUrl, '_blank');
     setSubmitted(true);
   };
 

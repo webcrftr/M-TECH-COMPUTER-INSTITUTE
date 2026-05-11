@@ -40,15 +40,6 @@ const detailedCourses = [
     color: "bg-purple-50"
   },
   {
-    title: "Digital Marketing Specialist",
-    hindi: "डिजिटल मार्केटिंग",
-    duration: "3 Months",
-    desc: "Master modern digital marketing skills including social media marketing, SEO, content marketing, and online advertising.",
-    skills: ["SEO Mastery", "Social Media Marketing", "Google Ads", "Content Marketing", "Instagram & FB Ads"],
-    icon: <Monitor className="text-red-500" />,
-    color: "bg-red-50"
-  },
-  {
     title: "Board Exam Preparation",
     hindi: "परीक्षा तयारी बँचेस",
     duration: "Academic Session",
