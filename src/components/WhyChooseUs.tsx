@@ -1,57 +1,59 @@
-import { CheckCircle, Users, Award, Clock, Heart, Star } from 'lucide-react';
+import { MousePointer2, UserCheck, Briefcase, Clock, Heart, IndianRupee } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const reasons = [
   {
-    title: "Experienced Faculty",
-    desc: "Learn from industry experts with years of teaching experience.",
-    icon: <Users className="text-brand-orange" />
+    title: "Practical Training",
+    icon: <MousePointer2 className="text-orange-500" />,
+    desc: "Hands-on learning with real-world projects and live assignments."
   },
   {
-    title: "Practical Learning",
-    desc: "No boring lectures. Hands-on training on actual software projects.",
-    icon: <CheckCircle className="text-brand-orange" />
+    title: "Experienced Teachers",
+    icon: <UserCheck className="text-blue-500" />,
+    desc: "Professional trainers with years of industry experience to guide you."
   },
   {
     title: "Job-Oriented Courses",
-    desc: "Curriculum designed to help you land your dream job quickly.",
-    icon: <Award className="text-brand-orange" />
+    icon: <Briefcase className="text-green-500" />,
+    desc: "Curriculum designed strictly according to current market demands."
   },
   {
     title: "Flexible Timings",
-    desc: "Morning, afternoon, and evening batches to fit your busy schedule.",
-    icon: <Clock className="text-brand-orange" />
+    icon: <Clock className="text-purple-500" />,
+    desc: "Batches from 9:00 AM to 6:00 PM to suit your busy schedule."
   },
   {
-    title: "Personal Attention",
-    desc: "Small batches to ensure every student gets the help they need.",
-    icon: <Heart className="text-brand-orange" />
+    title: "Friendly Environment",
+    icon: <Heart className="text-red-500" />,
+    desc: "Supportive learning atmosphere where students can grow comfortably."
+  },
+  {
+    title: "Affordable Fees",
+    icon: <IndianRupee className="text-yellow-600" />,
+    desc: "Quality education at a price that fits your budget perfectly."
   }
 ];
 
 export default function WhyChooseUs() {
   return (
-    <div id="benefits" className="bento-card bg-white scroll-mt-20">
-      <h4 className="font-bold mb-6 text-sm uppercase text-slate-400 tracking-widest flex items-center gap-2">
-        <CheckCircle size={16} className="text-brand-green" /> Why Us?
-      </h4>
-      
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {reasons.map((item, idx) => (
-          <div key={idx} className="flex items-center gap-4 p-3 bg-slate-50 rounded-xl border border-slate-100">
-            <div className="text-brand-green flex-shrink-0">
-               <CheckCircle size={18} fill="currentColor" className="fill-brand-green/20" />
+    <div id="benefits" className="flex flex-col gap-6 scroll-mt-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {reasons.map((reason, idx) => (
+          <motion.div 
+            key={idx}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: idx * 0.1 }}
+            className="bento-card bg-white p-8 group border border-slate-50"
+          >
+            <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-inner">
+              {reason.icon}
             </div>
-            <div className="text-sm font-bold text-brand-navy leading-tight">{item.title}</div>
-          </div>
+            <h4 className="font-black text-xl text-brand-navy mb-3">{reason.title}</h4>
+            <p className="text-slate-500 text-sm leading-relaxed">{reason.desc}</p>
+          </motion.div>
         ))}
-      </div>
-      
-      <div className="mt-8 flex items-center justify-between p-4 bg-brand-navy rounded-2xl">
-        <div className="flex gap-1">
-          {[1, 2, 3, 4, 5].map(i => <Star key={i} size={14} className="text-brand-orange" fill="currentColor" />)}
-        </div>
-        <div className="text-[10px] text-white font-bold uppercase tracking-wider">Top Rated in Naigaon</div>
       </div>
     </div>
   );

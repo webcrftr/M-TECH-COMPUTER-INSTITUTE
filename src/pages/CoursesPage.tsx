@@ -31,11 +31,11 @@ const detailedCourses = [
     color: "bg-green-50"
   },
   {
-    title: "Full Stack Programming",
-    hindi: "प्रोग्रामिंग कोर्सेस",
+    title: "Full Stack Development",
+    hindi: "फुल स्टॅक डेव्हलपमेंट",
     duration: "6 Months",
-    desc: "Build logical skills with modern languages. From basic C/C++ to advanced Python and Java integration.",
-    skills: ["C & C++ Basics", "Core Java", "Python Scripting", "Logic Building"],
+    desc: "Learn complete web development including frontend, backend, databases, APIs, and deployment with practical projects.",
+    skills: ["HTML & CSS", "JavaScript", "React JS", "Node.js", "MongoDB", "Express.js"],
     icon: <Code className="text-purple-500" />,
     color: "bg-purple-50"
   },
@@ -43,17 +43,17 @@ const detailedCourses = [
     title: "Digital Marketing Specialist",
     hindi: "डिजिटल मार्केटिंग",
     duration: "3 Months",
-    desc: "Grow businesses online. Master SEO, Social Media Marketing, and Google Ads management.",
-    skills: ["Search Engine SEO", "Instagram Ads", "Google Analytics", "Content Strategy"],
-    icon: <BookOpen className="text-red-500" />,
+    desc: "Master modern digital marketing skills including social media marketing, SEO, content marketing, and online advertising.",
+    skills: ["SEO Mastery", "Social Media Marketing", "Google Ads", "Content Marketing", "Instagram & FB Ads"],
+    icon: <Monitor className="text-red-500" />,
     color: "bg-red-50"
   },
   {
     title: "Board Exam Preparation",
-    hindi: "परीक्षा तयारी",
-    duration: "Flexible",
-    desc: "Special theory and practical batches for students appearing in computer-related board examinations.",
-    skills: ["Mock Practical Tests", "Theory Sessions", "Previous Year Papers", "Doubt Clearing"],
+    hindi: "परीक्षा तयारी बँचेस",
+    duration: "Academic Session",
+    desc: "Special guidance and computer education support for school and college students preparing for board exams.",
+    skills: ["Personal Attention", "Practical Learning", "Exam Guidance", "Doubt Solving"],
     icon: <GraduationCap className="text-indigo-500" />,
     color: "bg-indigo-50"
   }
