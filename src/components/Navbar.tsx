@@ -30,17 +30,17 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { title: 'Home', href: '#home', id: 'home' },
-    { title: 'About', href: '#about', id: 'about' },
-    { title: 'Courses', href: '#courses', id: 'courses' },
-    { title: 'Benefits', href: '#benefits', id: 'benefits' },
-    { title: 'Contact', href: '#contact', id: 'contact' },
+    { title: 'Home', href: '/#home', id: 'home' },
+    { title: 'About', href: '/#about', id: 'about' },
+    { title: 'Courses', href: '/#courses', id: 'courses' },
+    { title: 'Benefits', href: '/#benefits', id: 'benefits' },
+    { title: 'Contact', href: '/#contact', id: 'contact' },
   ];
 
   const handleNavClick = (e: any, href: string) => {
+    const targetId = href.split('#')[1];
     if (location.pathname === '/') {
       e.preventDefault();
-      const targetId = href.replace('#', '');
       const target = document.getElementById(targetId);
       if (target) {
         const offset = 80;
@@ -48,6 +48,9 @@ export default function Navbar() {
         window.scrollTo({ top: targetPosition, behavior: 'smooth' });
         setIsOpen(false);
       }
+    } else {
+      // If not on home page, navigation will happen naturally to /#hash
+      setIsOpen(false);
     }
   };
 

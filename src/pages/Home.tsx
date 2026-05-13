@@ -9,9 +9,9 @@ import { MapPin, Phone, Clock, MessageCircle, Star, GraduationCap, Users, Trophy
 
 export default function Home() {
   return (
-    <div id="home" className="flex flex-col gap-20 lg:gap-32 pb-20 bg-white">
+    <div className="flex flex-col gap-20 lg:gap-32 pb-20 bg-white">
       {/* Hero Section - The Original "Empowering Minds" Design */}
-      <section className="container mx-auto px-4 pt-24 lg:pt-32 scroll-mt-24">
+      <section id="home" className="container mx-auto px-4 pt-24 lg:pt-32 scroll-mt-24">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
@@ -100,13 +100,47 @@ export default function Home() {
         <Courses />
       </section>
 
-      {/* Why Choose Us */}
-      <section id="benefits" className="container mx-auto px-4 scroll-mt-24">
+      {/* About / Why Choose Us */}
+      <section id="about" className="container mx-auto px-4 scroll-mt-24">
         <div className="text-center mb-16">
           <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-orange mb-4">Advantages</h2>
           <h3 className="text-4xl md:text-5xl font-black text-brand-navy">Why Join M Tech?</h3>
         </div>
         <WhyChooseUs />
+      </section>
+
+      {/* Benefits / Features */}
+      <section id="benefits" className="bg-slate-900 py-24 scroll-mt-24 overflow-hidden relative">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-orange mb-4">Benefits</h2>
+            <h3 className="text-4xl md:text-5xl font-black text-white">Student Privileges</h3>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { icon: <Clock className="text-brand-orange" />, title: "Flexible Batches", desc: "Choose timings that suit your schedule." },
+              { icon: <Users className="text-brand-blue" />, title: "Personal Attention", desc: "Small batch sizes for better learning." },
+              { icon: <GraduationCap className="text-brand-green" />, title: "Certified Courses", desc: "Get industry-recognized certificates." },
+              { icon: <Trophy className="text-brand-orange" />, title: "Practical Logic", desc: "Focus on real-world projects." }
+            ].map((item, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-[32px] hover:bg-white/10 transition-colors"
+              >
+                <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+                  {item.icon}
+                </div>
+                <h4 className="text-white font-black text-lg mb-2">{item.title}</h4>
+                <p className="text-white/60 text-sm font-medium">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Gallery Section */}
