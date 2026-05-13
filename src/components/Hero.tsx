@@ -16,17 +16,17 @@ export default function Hero() {
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#fff_1px,transparent_1px)] bg-[size:40px_40px]"></div>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-12 items-center h-full relative z-10 p-4 lg:p-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center h-full relative z-10 p-4 lg:p-10">
           {/* Left Content */}
-          <div className="flex-1 text-center lg:text-left">
+          <div className="text-center lg:text-left flex flex-col justify-center">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-brand-orange/10 text-brand-orange px-4 py-2 rounded-2xl mb-8 border border-brand-orange/20"
+              className="inline-flex items-center gap-2 bg-brand-orange/10 text-brand-orange px-4 py-2 rounded-2xl mb-8 border border-brand-orange/20 self-center lg:self-start"
             >
               <Award size={18} />
-              <span className="text-xs font-black uppercase tracking-[0.2em]">Certified Training Center</span>
+              <span className="text-xs font-black uppercase tracking-[0.2em]">Empowering Minds Since 3+ Years</span>
             </motion.div>
 
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-8 tracking-tighter">
@@ -35,7 +35,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-slate-300 text-lg md:text-xl mb-10 leading-relaxed font-medium max-w-xl mx-auto lg:mx-0">
-              Professional computer training institute in Naigaon East with industry-oriented courses and practical, hands-on learning.
+              M Tech Computer Institute is more than just a training center; it's a launchpad for your digital career. Located in the heart of Naigaon East, we provide a modern learning environment with personalized attention to every student.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-12">
@@ -75,46 +75,79 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Image/Graphic */}
-          <div className="flex-1 relative w-full lg:w-auto h-full min-h-[400px] flex items-center justify-center">
-            {/* Main Illustration/Image Frame */}
-            <div className="relative w-full aspect-square max-w-[500px]">
-              <div className="absolute inset-0 bg-gradient-to-tr from-brand-orange/20 to-transparent rounded-[60px] blur-2xl"></div>
-              <div className="relative h-full w-full bg-slate-800 rounded-[60px] border border-white/10 shadow-2xl overflow-hidden group-hover:scale-[1.02] transition-transform duration-700">
-                <img 
-                  src="/lab.jpg" 
-                  alt="M Tech Computer Lab" 
-                  className="w-full h-full object-cover opacity-40 mix-blend-overlay scale-110 group-hover:scale-100 transition-transform duration-1000"
-                  referrerPolicy="no-referrer"
-                />
-                
-                {/* Overlay Floating Card */}
-                <motion.div 
-                  initial={{ x: 20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: 1 }}
-                  className="absolute bottom-8 right-8 bg-white/10 backdrop-blur-md p-6 rounded-3xl shadow-2xl flex flex-col items-center gap-1 border border-white/20"
-                >
-                  <div className="flex items-center gap-1 text-brand-navy mb-1">
-                    {[1, 2, 3, 4, 5].map((s) => (
-                      <Star key={s} size={14} fill="#F97316" className="text-brand-orange" />
-                    ))}
-                  </div>
-                  <div className="text-2xl font-black text-white">4.9</div>
-                  <div className="text-[9px] font-black text-white/50 uppercase tracking-widest leading-none">Google Rating</div>
-                </motion.div>
+          {/* Right Image Content */}
+          <div className="relative h-[420px] lg:h-[600px] w-full">
+             {/* Animated Glow Globes */}
+            <div className="absolute -top-20 -right-20 w-64 h-64 bg-brand-orange/20 rounded-full blur-[100px] animate-pulse"></div>
+            <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-brand-navy/40 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
 
-                {/* Floating Tech Badges */}
-                <div className="absolute top-8 left-8 flex gap-3">
-                   <div className="bg-white/10 backdrop-blur-md p-3 rounded-2xl border border-white/20">
-                      <GraduationCap className="text-brand-orange" size={24} />
-                   </div>
-                   <div className="bg-white/10 backdrop-blur-md p-3 rounded-2xl border border-white/20">
-                      <Users className="text-brand-orange" size={24} />
-                   </div>
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="relative h-full w-full rounded-[32px] border border-white/10 shadow-2xl overflow-hidden group"
+            >
+              {/* Premium Institute Image */}
+              <img 
+                src="https://iili.io/BbyruUB.md.jpg" 
+                alt="M Tech Computer Institute Cabin" 
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+              />
+              
+              {/* Dark Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent z-10" />
+
+              {/* Floating UI Badges */}
+              <motion.div 
+                initial={{ x: -20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.8 }}
+                className="absolute top-8 left-6 bg-white/10 backdrop-blur-xl p-3 rounded-2xl border border-white/20 shadow-2xl z-30 flex items-center gap-3"
+              >
+                <div className="bg-brand-green/20 p-2 rounded-xl">
+                  <Users className="text-brand-green" size={18} />
                 </div>
+                <div>
+                  <div className="text-white font-black text-sm">300+</div>
+                  <div className="text-white/50 text-[9px] font-bold uppercase tracking-wider">Students</div>
+                </div>
+              </motion.div>
+
+              {/* Glassmorphism Bottom Card */}
+              <div className="absolute bottom-6 left-6 right-6 z-30">
+                <motion.div 
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 1.2 }}
+                  className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-4 lg:p-6 text-white shadow-2xl"
+                >
+                  <h3 className="text-lg lg:text-xl font-black mb-1">Expert Career Guidance</h3>
+                  <p className="text-sm text-white/70 font-medium leading-relaxed">
+                    Free counseling sessions available daily from <span className="text-brand-orange font-black">9 AM to 6 PM</span>.
+                  </p>
+                </motion.div>
               </div>
-            </div>
+
+              {/* Floating Award Badge */}
+              <motion.div 
+                animate={{ 
+                  rotate: [0, 5, -5, 0],
+                  scale: [1, 1.05, 1]
+                }}
+                transition={{ 
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="absolute top-6 right-6 h-20 w-20 bg-brand-orange rounded-full flex items-center justify-center p-3 shadow-[0_0_50px_rgba(249,115,22,0.4)] z-40 border-4 border-brand-navy"
+              >
+                <div className="text-center">
+                  <Award size={24} className="text-white mx-auto mb-0.5" />
+                  <div className="text-[8px] font-black text-white leading-none uppercase">Certified</div>
+                </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </motion.div>

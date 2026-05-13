@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import ContactForm from '../components/ContactForm';
 
 export default function ContactPage() {
-  const mapUrl = "https://www.google.com/maps/dir/?api=1&destination=M+TECH+COMPUTER+INSTITUTE+Naigaon+East";
+  const mapUrl = "https://www.google.com/maps/place/M+TECH+COMPUTER+INSTITUTE/@19.3589303,72.8570808,42m/data=!3m1!1e3!4m6!3m5!1s0x3be7af5e681d0a3d:0xf2e7501d3d456871!8m2!3d19.3589501!4d72.8571951!16s%2Fg%2F11vpnmsd9w";
 
   return (
     <div className="bg-white min-h-screen">
@@ -40,17 +40,17 @@ export default function ContactPage() {
               <h2 className="text-2xl font-black text-brand-navy mb-8">Contact Information</h2>
               
               <div className="space-y-10 w-full mb-12">
-                <div className="flex gap-5">
-                  <div className="w-12 h-12 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center text-brand-orange flex-shrink-0">
+                <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="flex gap-5 group/map cursor-pointer">
+                  <div className="w-12 h-12 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center text-brand-orange flex-shrink-0 group-hover/map:bg-brand-orange group-hover/map:text-white transition-all">
                     <MapPin size={24} />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Our Location</div>
-                    <p className="text-brand-navy font-bold text-sm leading-relaxed">
-                      Don Bosco Rd, opp. Ishan Hospital, Naigaon East, Vasai-Virar, MH 401208
+                    <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1 group-hover/map:text-brand-orange transition-colors">Our Location</div>
+                    <p className="text-brand-navy font-bold text-sm leading-relaxed decoration-brand-orange/30 underline-offset-4 group-hover/map:underline">
+                      Don Bosco Rd, Opposite Ishan Hospital, Naigaon East, Vasai-Virar, Maharashtra 401208, India
                     </p>
                   </div>
-                </div>
+                </a>
 
                 <div className="flex gap-5">
                   <div className="w-12 h-12 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center text-brand-orange flex-shrink-0">
@@ -88,6 +88,7 @@ export default function ContactPage() {
                  <a 
                    href="https://wa.me/917755909266"
                    target="_blank"
+                   rel="noopener noreferrer"
                    className="flex items-center justify-center gap-2 bg-[#25D366] text-white py-4 rounded-xl font-bold text-sm hover:scale-[1.02] transition-transform"
                  >
                    <MessageCircle size={18} /> WhatsApp
@@ -119,18 +120,31 @@ export default function ContactPage() {
               </div>
               
               {/* Map at the bottom of the right card style */}
-              <div className="h-64 lg:h-72 w-full mt-auto relative group overflow-hidden border-t border-slate-100">
+              <div className="h-72 lg:h-[400px] w-full mt-auto relative group overflow-hidden border-t border-slate-100 rounded-[32px] m-4 shadow-xl">
+                <a 
+                  href={mapUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="absolute inset-0 z-10 block"
+                >
+                  <span className="sr-only">Open M Tech Computer Institute on Google Maps</span>
+                </a>
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15053.816698656157!2d72.84687535!3d19.34994275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a5a8726be62f%3A0x6b2b7324869485b!2sM%20Tech%20Computer%20Institute!5e0!3m2!1sen!2sin!4v1713721873041!5m2!1sen!2sin" 
-                  className="w-full h-full border-0 grayscale group-hover:grayscale-0 transition-all duration-700 opacity-60 group-hover:opacity-100" 
-                  allowFullScreen={true} 
-                  loading="lazy" 
+                  src="https://www.google.com/maps?q=M+TECH+COMPUTER+INSTITUTE+Naigaon&output=embed" 
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100 pointer-events-none" 
                 ></iframe>
-                <div className="absolute top-4 right-4 group-hover:scale-110 transition-transform">
+                <div className="absolute top-4 right-4 group-hover:scale-105 transition-transform z-20">
                   <a 
                     href={mapUrl}
                     target="_blank"
-                    className="flex items-center gap-2 bg-white text-brand-navy px-4 py-2 rounded-lg font-bold text-xs shadow-xl border border-slate-100"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 bg-white text-brand-navy px-4 py-2 rounded-xl font-black text-xs shadow-2xl border border-slate-100"
                   >
                     <Navigation size={14} className="text-brand-orange" />
                     Open in Maps

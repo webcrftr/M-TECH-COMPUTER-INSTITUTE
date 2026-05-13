@@ -1,4 +1,3 @@
-import Hero from '../components/Hero';
 import Courses from '../components/Courses';
 import WhyChooseUs from '../components/WhyChooseUs';
 import Testimonials from '../components/Testimonials';
@@ -6,84 +5,91 @@ import Gallery from '../components/Gallery';
 import ContactForm from '../components/ContactForm';
 import VideoSection from '../components/VideoSection';
 import { motion } from 'motion/react';
-import { MapPin, Phone, Clock, MessageCircle, Star, GraduationCap, Users, Trophy, Mail, Instagram } from 'lucide-react';
+import { MapPin, Phone, Clock, MessageCircle, Star, GraduationCap, Users, Trophy, Mail, Instagram, Navigation } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div id="home" className="flex flex-col gap-20 lg:gap-32 pb-20">
-      {/* Hero Section */}
-      <div className="container mx-auto px-4 pt-8 h-[calc(100vh-120px)] min-h-[600px]">
-        <Hero />
-      </div>
-
-      {/* About Section */}
-      <section id="about" className="container mx-auto px-4 scroll-mt-24">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <div id="home" className="flex flex-col gap-20 lg:gap-32 pb-20 bg-white">
+      {/* Hero Section - The Original "Empowering Minds" Design */}
+      <section className="container mx-auto px-4 pt-24 lg:pt-32 scroll-mt-24">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
             className="space-y-8"
           >
             <div>
-              <div className="inline-flex items-center gap-2 bg-brand-orange/10 text-brand-orange px-4 py-2 rounded-2xl mb-4 border border-brand-orange/20">
-                <Trophy size={16} />
-                <span className="text-[10px] font-black uppercase tracking-[0.2em]">Trusted Institute in Naigaon</span>
+              <div className="inline-flex items-center gap-2 bg-brand-orange/10 text-brand-orange px-4 py-2 rounded-2xl mb-6 border border-brand-orange/20">
+                <Trophy size={18} />
+                <span className="text-[10px] font-black uppercase tracking-[0.2em]">Empowering Minds Since 3+ Years</span>
               </div>
-              <h3 className="text-4xl md:text-5xl font-black text-brand-navy leading-tight">
-                Empowering Minds <br />
-                Since 3+ Years
-              </h3>
+              <h1 className="text-5xl md:text-7xl font-black text-brand-navy leading-[1.1] tracking-tighter">
+                Master Digital <br />
+                <span className="text-brand-orange">Skills</span> & Career
+              </h1>
             </div>
             
-            <p className="text-lg text-slate-500 leading-relaxed font-medium">
+            <p className="text-xl text-slate-500 leading-relaxed font-medium max-w-xl">
               M Tech Computer Institute is more than just a training center; it's a launchpad for your digital career. Located in the heart of Naigaon East, we provide a modern learning environment with personalized attention to every student.
             </p>
 
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-4">
               <div className="space-y-1">
-                <div className="text-3xl font-black text-brand-navy">300+</div>
+                <div className="text-4xl font-black text-brand-navy">300+</div>
                 <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Students Trained</div>
               </div>
               <div className="space-y-1 text-brand-orange">
-                <div className="text-3xl font-black">100%</div>
+                <div className="text-4xl font-black">100%</div>
                 <div className="text-[10px] font-bold uppercase tracking-widest opacity-60">Practical Focus</div>
               </div>
               <div className="space-y-1">
-                <div className="text-3xl font-black text-brand-navy">3+</div>
+                <div className="text-4xl font-black text-brand-navy">3+</div>
                 <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Years Excellence</div>
               </div>
             </div>
             
-            <div className="pt-4 flex flex-wrap gap-4">
-               <a href="#courses" className="bg-brand-navy text-white px-8 py-4 rounded-2xl font-black text-sm hover:bg-brand-orange transition-colors">Start Learning</a>
-               <a href="https://instagram.com/mhatre_tech" target="_blank" rel="noreferrer" className="flex items-center gap-3 border border-slate-200 px-8 py-4 rounded-2xl font-black text-sm text-brand-navy hover:bg-slate-50 transition-colors">
-                  <Instagram size={18} className="text-brand-orange" />
-                  Follow Us
+            <div className="pt-8 flex flex-wrap gap-4">
+               <a href="#courses" className="bg-brand-navy text-white px-10 py-5 rounded-2xl font-black text-lg hover:bg-brand-orange shadow-xl hover:-translate-y-1 transition-all duration-300">Start Learning</a>
+               <a href="https://wa.me/917755909266" target="_blank" rel="noreferrer" className="flex items-center gap-3 border border-slate-200 px-10 py-5 rounded-2xl font-black text-lg text-brand-navy hover:bg-slate-50 shadow-sm hover:-translate-y-1 transition-all duration-300">
+                  <MessageCircle size={20} className="text-brand-orange" />
+                  Free Counseling
                </a>
             </div>
           </motion.div>
 
-          <div className="relative">
+          <div className="relative lg:h-[650px] group">
              <motion.div 
-               initial={{ opacity: 0, scale: 0.9 }}
-               whileInView={{ opacity: 1, scale: 1 }}
-               viewport={{ once: true }}
-               className="relative z-10 rounded-[48px] overflow-hidden shadow-2xl border-8 border-white"
+               initial={{ opacity: 0, scale: 0.95 }}
+               animate={{ opacity: 1, scale: 1 }}
+               transition={{ duration: 1, delay: 0.2 }}
+               className="relative h-full z-10 rounded-[48px] overflow-hidden shadow-2xl border-8 border-white"
              >
-                <img src="/office.jpg" alt="M Tech Counseling Cabin" className="w-full aspect-[4/5] object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent"></div>
-                <div className="absolute bottom-8 left-8 right-8 bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/20">
-                   <div className="text-white font-black text-xl mb-1">Expert Career Guidance</div>
-                   <p className="text-white/80 text-xs font-medium">Free counseling sessions available daily from 9 AM to 6 PM.</p>
+                <img 
+                  src="https://iili.io/BbyruUB.md.jpg" 
+                  alt="M Tech Computer Institute Learning Environment" 
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" 
+                />
+                
+                {/* Dark Gradient Overlay for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                
+                {/* Expert Guidance Card */}
+                <div className="absolute bottom-8 left-8 right-8 bg-white/10 backdrop-blur-xl p-8 rounded-[32px] border border-white/20 shadow-2xl">
+                   <div className="text-white font-black text-2xl mb-2">Expert Career Guidance</div>
+                   <p className="text-white/90 text-sm font-medium leading-relaxed">
+                     Free counseling sessions available daily from <span className="text-brand-orange font-black">9 AM to 6 PM</span>.
+                   </p>
                 </div>
              </motion.div>
-             {/* Decorative blob */}
-             <div className="absolute -top-12 -right-12 w-64 h-64 bg-brand-orange/20 rounded-full blur-[100px] -z-10"></div>
-             <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-brand-blue/20 rounded-full blur-[100px] -z-10"></div>
+             
+             {/* Decorative Background Elements */}
+             <div className="absolute -top-12 -right-12 w-80 h-80 bg-brand-orange/10 rounded-full blur-[100px] -z-10 animate-pulse"></div>
+             <div className="absolute -bottom-12 -left-12 w-80 h-80 bg-brand-blue/10 rounded-full blur-[100px] -z-10 animate-pulse" style={{ animationDelay: '2s' }}></div>
           </div>
         </div>
       </section>
+
 
       {/* Courses Section */}
       <section id="courses" className="container mx-auto px-4 scroll-mt-24">
@@ -133,8 +139,8 @@ export default function Home() {
           {/* Contact Details Side */}
           <div className="lg:w-2/5 accent-navy p-10 lg:p-16 flex flex-col">
             <div className="mb-12">
-               <h3 className="text-4xl font-black mb-6">Get In Touch</h3>
-               <p className="opacity-70 font-medium">Have questions? Visit us or send a message and our team will assist you today.</p>
+               <h3 className="text-4xl font-black mb-6 text-white">Visit M Tech Computer Institute</h3>
+               <p className="opacity-70 font-medium text-white/80">Located in the heart of Naigaon East near Ishan Hospital. Visit us or send a message today.</p>
             </div>
 
             <div className="space-y-10 flex-grow">
@@ -145,9 +151,9 @@ export default function Home() {
                   <div>
                      <div className="text-[10px] font-black uppercase tracking-widest opacity-50 mb-1">Our Location</div>
                      <p className="font-bold text-sm leading-relaxed">
-                        Vishnu Apt Phase 2, 306, 3rd Floor, <br />
-                        Don Bosco Road, Opposite Ishan Hospital, <br />
-                        Naigaon (E)
+                        Don Bosco Rd, Opposite Ishan Hospital, <br />
+                        Naigaon East, Vasai-Virar, <br />
+                        Maharashtra 401208, India
                      </p>
                   </div>
                </div>
@@ -216,14 +222,36 @@ export default function Home() {
           <div className="lg:w-3/5 p-10 lg:p-16 flex flex-col bg-white">
             <ContactForm />
             
-            <div className="mt-12 flex-grow rounded-[40px] overflow-hidden border border-slate-100 h-[300px]">
+            <div className="mt-12 flex-grow rounded-[32px] overflow-hidden shadow-xl border border-slate-100 min-h-[350px] lg:h-[400px] relative group cursor-pointer">
+              <a 
+                href="https://www.google.com/maps/place/M+TECH+COMPUTER+INSTITUTE/@19.3589303,72.8570808,42m/data=!3m1!1e3!4m6!3m5!1s0x3be7af5e681d0a3d:0xf2e7501d3d456871!8m2!3d19.3589501!4d72.8571951!16s%2Fg%2F11vpnmsd9w" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="absolute inset-0 z-10 block"
+              >
+                <span className="sr-only">Open M Tech Computer Institute on Google Maps</span>
+              </a>
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15053.816698656157!2d72.84687535!3d19.34994275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a5a8726be62f%3A0x6b2b7324869485b!2sM%20Tech%20Computer%20Institute!5e0!3m2!1sen!2sin!4v1713721873041!5m2!1sen!2sin" 
-                className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-700" 
-                allowFullScreen={true} 
+                src="https://www.google.com/maps?q=M+TECH+COMPUTER+INSTITUTE+Naigaon&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                className="grayscale group-hover:grayscale-0 transition-all duration-700 pointer-events-none" 
               ></iframe>
+              <div className="absolute top-4 right-4 group-hover:scale-105 transition-transform z-20">
+                <a 
+                  href="https://www.google.com/maps/place/M+TECH+COMPUTER+INSTITUTE/@19.3589303,72.8570808,42m/data=!3m1!1e3!4m6!3m5!1s0x3be7af5e681d0a3d:0xf2e7501d3d456871!8m2!3d19.3589501!4d72.8571951!16s%2Fg%2F11vpnmsd9w"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-white text-brand-navy px-5 py-2.5 rounded-xl font-black text-xs shadow-2xl border border-slate-100"
+                >
+                  <Navigation size={14} className="text-brand-orange" />
+                  Open in Maps
+                </a>
+              </div>
             </div>
           </div>
         </div>

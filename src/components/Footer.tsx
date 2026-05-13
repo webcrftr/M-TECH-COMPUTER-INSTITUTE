@@ -69,12 +69,17 @@ export default function Footer() {
           <div>
             <h3 className="font-black text-xs uppercase tracking-[0.2em] text-brand-navy mb-8">Contact Us</h3>
             <div className="space-y-4">
-              <div className="flex gap-4">
-                <MapPin size={18} className="text-brand-orange flex-shrink-0" />
-                <p className="text-sm font-bold text-slate-500 leading-relaxed">
-                  Vishnu Apt Phase 2, 306, 3rd Floor, Don Bosco Rd, Naigaon (E)
+              <a 
+                href="https://www.google.com/maps/place/M+TECH+COMPUTER+INSTITUTE/@19.3589303,72.8570808,42m/data=!3m1!1e3!4m6!3m5!1s0x3be7af5e681d0a3d:0xf2e7501d3d456871!8m2!3d19.3589501!4d72.8571951!16s%2Fg%2F11vpnmsd9w"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-4 group/footer-map"
+              >
+                <MapPin size={18} className="text-brand-orange flex-shrink-0 group-hover/footer-map:scale-110 transition-transform" />
+                <p className="text-sm font-bold text-slate-500 leading-relaxed group-hover/footer-map:text-brand-orange transition-colors">
+                  Don Bosco Rd, Opposite Ishan Hospital, Naigaon East, Vasai-Virar, Maharashtra 401208, India
                 </p>
-              </div>
+              </a>
               <div className="flex gap-4">
                 <Phone size={18} className="text-brand-orange flex-shrink-0" />
                 <p className="text-sm font-bold text-slate-500">077559 09266</p>

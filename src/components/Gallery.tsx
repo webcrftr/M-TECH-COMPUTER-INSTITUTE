@@ -4,17 +4,17 @@ import { useState } from 'react';
 
 const galleryImages = [
   {
-    src: "/reception.jpg",
+    src: "https://iili.io/BbytNzN.md.jpg",
     title: "Reception / Waiting Area",
     caption: "Comfortable Student Waiting Area"
   },
   {
-    src: "/lab.jpg",
+    src: "https://iili.io/BbyQckQ.md.jpg",
     title: "Computer Lab",
     caption: "Advanced Practical Computer Lab"
   },
   {
-    src: "/office.jpg",
+    src: "https://iili.io/BbyruUB.md.jpg",
     title: "Office / Counseling Cabin",
     caption: "Professional Counseling & Support Desk"
   }
@@ -64,22 +64,22 @@ export default function Gallery() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
               onClick={() => setSelectedIdx(idx)}
-              className="group relative rounded-[40px] overflow-hidden shadow-xl bg-white border border-slate-100 h-[400px] cursor-pointer"
+              className="group relative rounded-[28px] overflow-hidden shadow-xl bg-white border border-slate-100 h-[400px] cursor-pointer"
             >
-              <div className="absolute inset-0 bg-brand-navy/20 group-hover:bg-brand-navy/40 transition-colors duration-500 z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-brand-navy/20 to-transparent group-hover:from-brand-navy/90 transition-colors duration-500 z-10"></div>
               <img 
                 src={image.src} 
                 alt={image.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
+                className="w-full h-full object-cover transition duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
               
               {/* Overlay Content */}
-              <div className="absolute inset-0 z-20 flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <div className="glass-morphism p-6 rounded-3xl border-white/30">
+              <div className="absolute inset-0 z-20 flex flex-col justify-end p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                <div className="bg-white/10 backdrop-blur-md p-5 rounded-[28px] border border-white/20">
                   <h4 className="text-white font-black text-xl mb-1">{image.title}</h4>
-                  <p className="text-white/80 text-xs font-bold uppercase tracking-wider">{image.caption}</p>
+                  <p className="text-white/70 text-[10px] font-black uppercase tracking-widest">{image.caption}</p>
                 </div>
               </div>
 

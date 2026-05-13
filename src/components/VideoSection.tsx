@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Play, Tv, ShieldCheck, Sparkles } from 'lucide-react';
+import { Tv, ShieldCheck, Sparkles } from 'lucide-react';
 
 export default function VideoSection() {
   return (
@@ -30,19 +30,19 @@ export default function VideoSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative max-w-5xl mx-auto rounded-[48px] overflow-hidden shadow-[0_0_100px_rgba(0,0,0,0.5)] border border-white/10 aspect-video group"
+          className="relative max-w-5xl mx-auto rounded-[32px] md:rounded-[48px] overflow-hidden shadow-[0_0_100px_rgba(0,0,0,0.5)] border border-white/10 bg-black min-h-[420px] md:min-h-[600px] group"
         >
-          <video 
-            className="w-full h-full object-cover"
-            controls
-            poster="/lab.jpg"
-          >
-            <source src="/video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <iframe
+            src="https://player.cloudinary.com/embed/?cloud_name=dk9ux64oy&public_id=IMG_7429_-_Copy_gwbuiw"
+            allow="autoplay; fullscreen; encrypted-media"
+            allowFullScreen
+            className="w-full h-full min-h-[420px] md:min-h-[600px] border-none block relative z-10"
+          ></iframe>
           
-          {/* Overlay Features */}
-          <div className="absolute top-8 left-8 flex gap-4 pointer-events-none">
+          {/* Overlay Features - Positioned above the iframe if possible, though iframes usually take priority. 
+              We'll keep them but they might be covered by the iframe depending on browser z-index handling. 
+          */}
+          <div className="absolute top-8 left-8 flex gap-4 pointer-events-none z-20">
             <div className="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl flex items-center gap-2">
               <ShieldCheck size={16} className="text-brand-orange" />
               <span className="text-[10px] font-black text-white uppercase tracking-widest">Premium Facility</span>
