@@ -14,12 +14,12 @@ export default function ContactPage() {
              <motion.div 
                initial={{ opacity: 0, y: 20 }}
                animate={{ opacity: 1, y: 0 }}
-               className="inline-flex items-center gap-2 bg-brand-orange/20 text-brand-orange px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest mb-6 border border-brand-orange/20"
+               className="inline-flex items-center gap-2 bg-brand-primary/20 text-brand-primary px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest mb-6 border border-brand-primary/20"
              >
                <Star size={14} fill="currentColor" /> 4.9 Rated Center
              </motion.div>
              <h1 className="text-4xl md:text-6xl font-black mb-8 leading-tight">
-               Start Your <span className="text-brand-orange">Career</span> <br/>Conversion Today
+               Start Your <span className="text-brand-primary">Career</span> <br/>Conversion Today
              </h1>
              <p className="text-xl opacity-70 leading-relaxed font-medium">
                Visit our Naigaon center for a free counseling session or get in touch with our experts online.
@@ -27,7 +27,7 @@ export default function ContactPage() {
           </div>
         </div>
         {/* Background decorative elements */}
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-orange/5 blur-[120px]"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-primary/5 blur-[120px]"></div>
       </div>
 
       {/* Main Content Area */}
@@ -41,19 +41,19 @@ export default function ContactPage() {
               
               <div className="space-y-10 w-full mb-12">
                 <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="flex gap-5 group/map cursor-pointer">
-                  <div className="w-12 h-12 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center text-brand-orange flex-shrink-0 group-hover/map:bg-brand-orange group-hover/map:text-white transition-all">
+                  <div className="w-12 h-12 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center text-brand-primary flex-shrink-0 group-hover/map:bg-brand-primary group-hover/map:text-white transition-all">
                     <MapPin size={24} />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1 group-hover/map:text-brand-orange transition-colors">Our Location</div>
-                    <p className="text-brand-navy font-bold text-sm leading-relaxed decoration-brand-orange/30 underline-offset-4 group-hover/map:underline">
+                    <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1 group-hover/map:text-brand-primary transition-colors">Our Location</div>
+                    <p className="text-brand-navy font-bold text-sm leading-relaxed decoration-brand-primary/30 underline-offset-4 group-hover/map:underline">
                       Don Bosco Rd, Opposite Ishan Hospital, Naigaon East, Vasai-Virar, Maharashtra 401208, India
                     </p>
                   </div>
                 </a>
 
                 <div className="flex gap-5">
-                  <div className="w-12 h-12 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center text-brand-orange flex-shrink-0">
+                  <div className="w-12 h-12 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center text-brand-primary flex-shrink-0">
                     <Clock size={24} />
                   </div>
                   <div>
@@ -66,12 +66,12 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex gap-5">
-                  <div className="w-12 h-12 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center text-brand-orange flex-shrink-0">
+                  <div className="w-12 h-12 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center text-brand-primary flex-shrink-0">
                     <Phone size={24} />
                   </div>
                   <div>
                     <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Call for Enquiry</div>
-                    <a href="tel:07755909266" className="text-brand-navy font-black text-xl hover:text-brand-orange transition-colors">
+                    <a href="tel:07755909266" className="text-brand-navy font-black text-xl hover:text-brand-primary transition-colors">
                       077559 09266
                     </a>
                   </div>
@@ -81,7 +81,7 @@ export default function ContactPage() {
               <div className="grid grid-cols-2 gap-4 w-full mt-auto">
                  <a 
                    href="tel:07755909266"
-                   className="flex items-center justify-center gap-2 bg-brand-navy text-white py-4 rounded-xl font-bold text-sm hover:bg-brand-blue transition-all"
+                   className="flex items-center justify-center gap-2 bg-brand-navy text-white py-4 rounded-xl font-bold text-sm hover:bg-brand-primary transition-all shadow-lg shadow-brand-navy/10 hover:shadow-brand-primary/20"
                  >
                    <Phone size={18} /> Call Now
                  </a>
@@ -89,7 +89,7 @@ export default function ContactPage() {
                    href="https://wa.me/917755909266"
                    target="_blank"
                    rel="noopener noreferrer"
-                   className="flex items-center justify-center gap-2 bg-[#25D366] text-white py-4 rounded-xl font-bold text-sm hover:scale-[1.02] transition-transform"
+                   className="flex items-center justify-center gap-2 bg-[#25D366] text-white py-4 rounded-xl font-bold text-sm hover:scale-[1.02] transition-transform shadow-lg shadow-green-500/10"
                  >
                    <MessageCircle size={18} /> WhatsApp
                  </a>
@@ -144,9 +144,9 @@ export default function ContactPage() {
                     href={mapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-white text-brand-navy px-4 py-2 rounded-xl font-black text-xs shadow-2xl border border-slate-100"
+                    className="flex items-center gap-2 bg-white text-brand-navy px-4 py-2 rounded-xl font-black text-xs shadow-2xl border border-slate-100 hover:bg-brand-primary hover:text-white transition-colors"
                   >
-                    <Navigation size={14} className="text-brand-orange" />
+                    <Navigation size={14} className="text-brand-primary group-hover:text-white" />
                     Open in Maps
                   </a>
                 </div>

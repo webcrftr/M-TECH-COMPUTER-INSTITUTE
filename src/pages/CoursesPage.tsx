@@ -18,8 +18,8 @@ const detailedCourses = [
     duration: "3-4 Months",
     desc: "Professional accounting course designed for job seekers. Master bookkeeping, inventory, and taxation.",
     skills: ["TallyPrime 4.0", "GST Filing", "TDS/TCS", "Payroll Analysis"],
-    icon: <Calculator className="text-orange-500" />,
-    color: "bg-orange-50"
+    icon: <Calculator className="text-blue-600" />,
+    color: "bg-blue-50"
   },
   {
     title: "Advanced Excel for Business",
@@ -27,8 +27,8 @@ const detailedCourses = [
     duration: "1-2 Months",
     desc: "Become the data expert in any office. Learn complex formulas, pivot tables, and dashboard automation.",
     skills: ["VLOOKUP/HLOOKUP", "Pivot Tables", "Power Query", "Excel Macros"],
-    icon: <FileSpreadsheet className="text-green-500" />,
-    color: "bg-green-50"
+    icon: <FileSpreadsheet className="text-emerald-500" />,
+    color: "bg-emerald-50"
   },
   {
     title: "Full Stack Development",
@@ -45,8 +45,8 @@ const detailedCourses = [
     duration: "Academic Session",
     desc: "Special guidance and computer education support for school and college students preparing for board exams.",
     skills: ["Personal Attention", "Practical Learning", "Exam Guidance", "Doubt Solving"],
-    icon: <GraduationCap className="text-indigo-500" />,
-    color: "bg-indigo-50"
+    icon: <GraduationCap className="text-brand-accent" />,
+    color: "bg-brand-light"
   }
 ];
 
@@ -61,13 +61,13 @@ export default function CoursesPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-extrabold mb-6"
           >
-            Job-Oriented <span className="text-brand-orange">Professional Courses</span>
+            Job-Oriented <span className="text-brand-primary">Professional Courses</span>
           </motion.h1>
           <p className="text-xl opacity-80 max-w-2xl mx-auto">
             Choose from a variety of courses designed to make you industry-ready with practical, hands-on training.
           </p>
         </div>
-        <div className="absolute top-0 right-0 w-64 h-64 bg-brand-orange/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
       </div>
 
       {/* Courses List */}
@@ -79,14 +79,14 @@ export default function CoursesPage() {
                initial={{ opacity: 0, x: idx % 2 === 0 ? -20 : 20 }}
                whileInView={{ opacity: 1, x: 0 }}
                viewport={{ once: true }}
-               className="bento-card group hover:border-brand-orange/30 transition-all p-0 flex flex-col sm:flex-row"
+               className="bento-card group hover:border-brand-primary/30 transition-all p-0 flex flex-col sm:flex-row"
             >
               <div className={`p-8 sm:w-1/3 flex flex-col items-center justify-center ${course.color}`}>
                 <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform">
                   {course.icon}
                 </div>
                 <div className="text-brand-navy font-black text-center text-sm">{course.title}</div>
-                <div className="text-brand-orange font-bold text-[10px] mt-1 uppercase tracking-widest">{course.duration}</div>
+                <div className="text-brand-primary font-bold text-[10px] mt-1 uppercase tracking-widest">{course.duration}</div>
               </div>
               
               <div className="p-8 sm:w-2/3 flex flex-col">
@@ -105,7 +105,7 @@ export default function CoursesPage() {
                   ))}
                 </div>
                 
-                <Link to="/contact" className="mt-auto bg-brand-navy text-white text-center py-4 rounded-xl font-bold hover:bg-brand-orange transition-colors">
+                <Link to="/contact" className="mt-auto bg-brand-navy text-white text-center py-4 rounded-xl font-bold hover:bg-brand-primary transition-colors shadow-lg shadow-brand-navy/10 hover:shadow-brand-primary/20">
                   Enquire Now
                 </Link>
               </div>
@@ -119,7 +119,7 @@ export default function CoursesPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md text-brand-orange">
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md text-brand-primary">
                 <Award size={24} />
               </div>
               <div>
@@ -128,7 +128,7 @@ export default function CoursesPage() {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md text-brand-orange">
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md text-brand-primary">
                 <Clock size={24} />
               </div>
               <div>
@@ -137,7 +137,7 @@ export default function CoursesPage() {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md text-brand-orange">
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md text-brand-primary">
                 <CheckCircle2 size={24} />
               </div>
               <div>

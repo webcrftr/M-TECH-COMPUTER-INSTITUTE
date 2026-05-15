@@ -23,7 +23,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-brand-orange/10 text-brand-orange px-4 py-2 rounded-2xl mb-8 border border-brand-orange/20 self-center lg:self-start"
+              className="inline-flex items-center gap-2 bg-brand-primary/10 text-brand-primary px-4 py-2 rounded-2xl mb-8 border border-brand-primary/20 self-center lg:self-start"
             >
               <Award size={18} />
               <span className="text-xs font-black uppercase tracking-[0.2em]">Empowering Minds Since 3+ Years</span>
@@ -31,7 +31,7 @@ export default function Hero() {
 
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-8 tracking-tighter">
               Master Digital Skills & <br />
-              <span className="text-brand-orange drop-shadow-sm">Build Your Career</span>
+              <span className="text-brand-primary drop-shadow-sm">Build Your Career</span>
             </h1>
 
             <p className="text-slate-300 text-lg md:text-xl mb-10 leading-relaxed font-medium max-w-xl mx-auto lg:mx-0">
@@ -43,7 +43,7 @@ export default function Hero() {
                 href="https://wa.me/917755909266?text=Hello%20M%20Tech%20Computer%20Institute%2C%20I%20want%20to%20book%20a%20free%20demo%20session."
                 target="_blank"
                 rel="noreferrer"
-                className="bg-brand-orange text-white px-10 py-5 rounded-2xl font-black text-lg shadow-[0_15px_30px_-5px_rgba(249,115,22,0.4)] hover:shadow-[0_20px_40px_-5px_rgba(249,115,22,0.5)] hover:-translate-y-1.5 transition-all duration-300 flex items-center gap-3"
+                className="bg-brand-primary text-white px-10 py-5 rounded-2xl font-black text-lg shadow-[0_15px_30px_-5px_rgba(37,99,235,0.4)] hover:shadow-[0_20px_40px_-5px_rgba(37,99,235,0.5)] hover:-translate-y-1.5 transition-all duration-300 flex items-center gap-3"
               >
                 Book Free Demo
               </a>
@@ -65,7 +65,7 @@ export default function Hero() {
                 <span className="text-xs font-bold uppercase tracking-wider">300+ Students</span>
               </div>
               <div className="flex items-center gap-2 text-white/70">
-                <Clock size={20} className="text-brand-orange" />
+                <Clock size={20} className="text-brand-primary" />
                 <span className="text-xs font-bold uppercase tracking-wider">9 AM – 6 PM</span>
               </div>
               <div className="flex items-center gap-2 text-white/70">
@@ -78,7 +78,7 @@ export default function Hero() {
           {/* Right Image Content */}
           <div className="relative h-[420px] lg:h-[600px] w-full">
              {/* Animated Glow Globes */}
-            <div className="absolute -top-20 -right-20 w-64 h-64 bg-brand-orange/20 rounded-full blur-[100px] animate-pulse"></div>
+            <div className="absolute -top-20 -right-20 w-64 h-64 bg-brand-primary/20 rounded-full blur-[100px] animate-pulse"></div>
             <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-brand-navy/40 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
 
             <motion.div 
@@ -124,7 +124,7 @@ export default function Hero() {
                 >
                   <h3 className="text-lg lg:text-xl font-black mb-1">Expert Career Guidance</h3>
                   <p className="text-sm text-white/70 font-medium leading-relaxed">
-                    Free counseling sessions available daily from <span className="text-brand-orange font-black">9 AM to 6 PM</span>.
+                    Free counseling sessions available daily from <span className="text-brand-primary font-black">9 AM to 6 PM</span>.
                   </p>
                 </motion.div>
               </div>
@@ -140,7 +140,7 @@ export default function Hero() {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="absolute top-6 right-6 h-20 w-20 bg-brand-orange rounded-full flex items-center justify-center p-3 shadow-[0_0_50px_rgba(249,115,22,0.4)] z-40 border-4 border-brand-navy"
+                className="absolute top-6 right-6 h-20 w-20 bg-brand-primary rounded-full flex items-center justify-center p-3 shadow-[0_0_50px_rgba(37,99,235,0.4)] z-40 border-4 border-brand-navy"
               >
                 <div className="text-center">
                   <Award size={24} className="text-white mx-auto mb-0.5" />

@@ -49,7 +49,7 @@ export default function ContactForm() {
             <p className="text-slate-500 mb-10 max-w-xs mx-auto">Thank you for reaching out. Our experts will call you back within 24 hours.</p>
             <button 
               onClick={() => setSubmitted(false)}
-              className="text-brand-orange font-black text-sm uppercase tracking-widest hover:underline"
+              className="text-brand-primary font-black text-sm uppercase tracking-widest hover:underline"
             >
               Send another inquiry
             </button>
@@ -69,7 +69,7 @@ export default function ContactForm() {
                     type="text" 
                     {...register("name", { required: "Name is required" })}
                     placeholder="Enter your name"
-                    className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 text-sm focus:border-brand-orange focus:bg-white outline-none transition-all font-bold"
+                    className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 text-sm focus:border-brand-primary focus:bg-white outline-none transition-all font-bold"
                   />
                   {errors.name && <span className="text-red-500 text-[10px] mt-1 ml-1 font-bold">{errors.name.message}</span>}
                 </div>
@@ -80,7 +80,7 @@ export default function ContactForm() {
                     type="tel" 
                     {...register("phone", { required: "Phone is required", pattern: { value: /^[0-9]{10}$/, message: "Valid 10-digit number needed" } })}
                     placeholder="10-digit mobile number"
-                    className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 text-sm focus:border-brand-orange focus:bg-white outline-none transition-all font-bold"
+                    className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 text-sm focus:border-brand-primary focus:bg-white outline-none transition-all font-bold"
                   />
                   {errors.phone && <span className="text-red-500 text-[10px] mt-1 ml-1 font-bold">{errors.phone.message}</span>}
                 </div>
@@ -90,7 +90,7 @@ export default function ContactForm() {
                 <label className="text-[10px] uppercase font-black tracking-widest text-slate-400 ml-1">Interested Course</label>
                 <select 
                   {...register("course", { required: "Please select a course" })}
-                  className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 text-sm focus:border-brand-orange focus:bg-white outline-none transition-all font-bold appearance-none cursor-pointer"
+                  className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 text-sm focus:border-brand-primary focus:bg-white outline-none transition-all font-bold appearance-none cursor-pointer"
                 >
                   <option value="">Select a course</option>
                   {courses.map((c) => (
@@ -106,14 +106,14 @@ export default function ContactForm() {
                    {...register("message")}
                    rows={3}
                    placeholder="Any specific questions? (Optional)"
-                   className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 text-sm focus:border-brand-orange focus:bg-white outline-none transition-all font-bold resize-none"
+                   className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 text-sm focus:border-brand-primary focus:bg-white outline-none transition-all font-bold resize-none"
                 ></textarea>
               </div>
               
               <button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full bg-brand-navy text-white py-5 rounded-2xl font-black text-sm hover:bg-slate-800 transition-all shadow-xl hover:-translate-y-1 active:translate-y-0 disabled:opacity-50 disabled:translate-y-0"
+                className="w-full bg-brand-navy text-white py-5 rounded-2xl font-black text-sm hover:bg-slate-800 transition-all shadow-xl hover:-translate-y-1 active:translate-y-0 disabled:opacity-50 disabled:translate-y-0 shadow-brand-navy/10"
               >
                 {isSubmitting ? "SENDING..." : "SUBMIT INQUIRY"}
               </button>

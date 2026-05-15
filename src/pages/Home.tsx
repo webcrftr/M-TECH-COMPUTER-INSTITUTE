@@ -20,13 +20,13 @@ export default function Home() {
             className="space-y-8"
           >
             <div>
-              <div className="inline-flex items-center gap-2 bg-brand-orange/10 text-brand-orange px-4 py-2 rounded-2xl mb-6 border border-brand-orange/20">
+              <div className="inline-flex items-center gap-2 bg-brand-primary/10 text-brand-primary px-4 py-2 rounded-2xl mb-6 border border-brand-primary/20">
                 <Trophy size={18} />
                 <span className="text-[10px] font-black uppercase tracking-[0.2em]">Empowering Minds Since 3+ Years</span>
               </div>
               <h1 className="text-5xl md:text-7xl font-black text-brand-navy leading-[1.1] tracking-tighter">
                 Master Digital <br />
-                <span className="text-brand-orange">Skills</span> & Career
+                <span className="text-brand-primary">Skills</span> & Career
               </h1>
             </div>
             
@@ -39,7 +39,7 @@ export default function Home() {
                 <div className="text-4xl font-black text-brand-navy">300+</div>
                 <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Students Trained</div>
               </div>
-              <div className="space-y-1 text-brand-orange">
+              <div className="space-y-1 text-brand-primary">
                 <div className="text-4xl font-black">100%</div>
                 <div className="text-[10px] font-bold uppercase tracking-widest opacity-60">Practical Focus</div>
               </div>
@@ -50,9 +50,9 @@ export default function Home() {
             </div>
             
             <div className="pt-8 flex flex-wrap gap-4">
-               <a href="#courses" className="bg-brand-navy text-white px-10 py-5 rounded-2xl font-black text-lg hover:bg-brand-orange shadow-xl hover:-translate-y-1 transition-all duration-300">Start Learning</a>
+               <a href="#courses" className="bg-brand-navy text-white px-10 py-5 rounded-2xl font-black text-lg hover:bg-brand-primary shadow-xl hover:-translate-y-1 transition-all duration-300">Start Learning</a>
                <a href="https://wa.me/917755909266" target="_blank" rel="noreferrer" className="flex items-center gap-3 border border-slate-200 px-10 py-5 rounded-2xl font-black text-lg text-brand-navy hover:bg-slate-50 shadow-sm hover:-translate-y-1 transition-all duration-300">
-                  <MessageCircle size={20} className="text-brand-orange" />
+                  <MessageCircle size={20} className="text-brand-primary" />
                   Free Counseling
                </a>
             </div>
@@ -66,9 +66,9 @@ export default function Home() {
                className="relative h-full z-10 rounded-[48px] overflow-hidden shadow-2xl border-8 border-white"
              >
                 <img 
-                  src="https://iili.io/BbyruUB.md.jpg" 
-                  alt="M Tech Computer Institute Learning Environment" 
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" 
+                   src="https://iili.io/BbyruUB.md.jpg" 
+                   alt="M Tech Computer Institute Learning Environment" 
+                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" 
                 />
                 
                 {/* Dark Gradient Overlay for text readability */}
@@ -78,14 +78,14 @@ export default function Home() {
                 <div className="absolute bottom-8 left-8 right-8 bg-white/10 backdrop-blur-xl p-8 rounded-[32px] border border-white/20 shadow-2xl">
                    <div className="text-white font-black text-2xl mb-2">Expert Career Guidance</div>
                    <p className="text-white/90 text-sm font-medium leading-relaxed">
-                     Free counseling sessions available daily from <span className="text-brand-orange font-black">9 AM to 6 PM</span>.
+                     Free counseling sessions available daily from <span className="text-brand-primary font-black">9 AM to 6 PM</span>.
                    </p>
                 </div>
              </motion.div>
              
              {/* Decorative Background Elements */}
-             <div className="absolute -top-12 -right-12 w-80 h-80 bg-brand-orange/10 rounded-full blur-[100px] -z-10 animate-pulse"></div>
-             <div className="absolute -bottom-12 -left-12 w-80 h-80 bg-brand-blue/10 rounded-full blur-[100px] -z-10 animate-pulse" style={{ animationDelay: '2s' }}></div>
+             <div className="absolute -top-12 -right-12 w-80 h-80 bg-brand-primary/10 rounded-full blur-[100px] -z-10 animate-pulse"></div>
+             <div className="absolute -bottom-12 -left-12 w-80 h-80 bg-brand-accent/10 rounded-full blur-[100px] -z-10 animate-pulse" style={{ animationDelay: '2s' }}></div>
           </div>
         </div>
       </section>
@@ -94,7 +94,7 @@ export default function Home() {
       {/* Courses Section */}
       <section id="courses" className="container mx-auto px-4 scroll-mt-24">
         <div className="text-center mb-16">
-          <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-orange mb-4">Curriculum</h2>
+          <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-primary mb-4">Curriculum</h2>
           <h3 className="text-4xl md:text-5xl font-black text-brand-navy">Choose Your Career Path</h3>
         </div>
         <Courses />
@@ -103,7 +103,7 @@ export default function Home() {
       {/* About / Why Choose Us */}
       <section id="about" className="container mx-auto px-4 scroll-mt-24">
         <div className="text-center mb-16">
-          <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-orange mb-4">Advantages</h2>
+          <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-primary mb-4">Advantages</h2>
           <h3 className="text-4xl md:text-5xl font-black text-brand-navy">Why Join M Tech?</h3>
         </div>
         <WhyChooseUs />
@@ -113,16 +113,16 @@ export default function Home() {
       <section id="benefits" className="bg-slate-900 py-24 scroll-mt-24 overflow-hidden relative">
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-orange mb-4">Benefits</h2>
+            <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-primary mb-4">Benefits</h2>
             <h3 className="text-4xl md:text-5xl font-black text-white">Student Privileges</h3>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: <Clock className="text-brand-orange" />, title: "Flexible Batches", desc: "Choose timings that suit your schedule." },
-              { icon: <Users className="text-brand-blue" />, title: "Personal Attention", desc: "Small batch sizes for better learning." },
+              { icon: <Clock className="text-brand-primary" />, title: "Flexible Batches", desc: "Choose timings that suit your schedule." },
+              { icon: <Users className="text-brand-accent" />, title: "Personal Attention", desc: "Small batch sizes for better learning." },
               { icon: <GraduationCap className="text-brand-green" />, title: "Certified Courses", desc: "Get industry-recognized certificates." },
-              { icon: <Trophy className="text-brand-orange" />, title: "Practical Logic", desc: "Focus on real-world projects." }
+              { icon: <Trophy className="text-brand-primary" />, title: "Practical Logic", desc: "Focus on real-world projects." }
             ].map((item, i) => (
               <motion.div 
                 key={i}
@@ -156,7 +156,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/3">
-              <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-orange mb-4">Success Stories</h2>
+              <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-primary mb-4">Success Stories</h2>
               <h3 className="text-4xl font-black text-brand-navy mb-6">What Our Students Say</h3>
               <p className="text-slate-500 font-medium">Over 300+ students from Naigaon East have transformed their digital journey with us.</p>
             </div>
@@ -180,7 +180,7 @@ export default function Home() {
             <div className="space-y-10 flex-grow">
                <div className="flex gap-6">
                   <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/10 flex-shrink-0">
-                     <MapPin className="text-brand-orange" />
+                     <MapPin className="text-brand-primary" />
                   </div>
                   <div>
                      <div className="text-[10px] font-black uppercase tracking-widest opacity-50 mb-1">Our Location</div>
@@ -194,11 +194,11 @@ export default function Home() {
 
                <div className="flex gap-6">
                   <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/10 flex-shrink-0">
-                     <Phone className="text-brand-orange" />
+                     <Phone className="text-brand-primary" />
                   </div>
                   <div>
                      <div className="text-[10px] font-black uppercase tracking-widest opacity-50 mb-1">Call Us</div>
-                     <p className="font-black text-2xl hover:text-brand-orange transition-colors">
+                     <p className="font-black text-2xl hover:text-brand-primary transition-colors">
                         077559 09266
                      </p>
                   </div>
@@ -206,7 +206,7 @@ export default function Home() {
 
                <div className="flex gap-6">
                   <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/10 flex-shrink-0">
-                     <Clock className="text-brand-orange" />
+                     <Clock className="text-brand-primary" />
                   </div>
                   <div>
                      <div className="text-[10px] font-black uppercase tracking-widest opacity-50 mb-1">Class Timings</div>
@@ -218,11 +218,11 @@ export default function Home() {
                </div>
                 <div className="flex gap-6">
                    <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/10 flex-shrink-0">
-                      <Mail className="text-brand-orange" />
+                      <Mail className="text-brand-primary" />
                    </div>
                    <div>
                       <div className="text-[10px] font-black uppercase tracking-widest opacity-50 mb-1">Email Us</div>
-                      <a href="mailto:mhatretech0@gmail.com" className="font-black text-lg md:text-xl hover:text-brand-orange transition-colors break-all">
+                      <a href="mailto:mhatretech0@gmail.com" className="font-black text-lg md:text-xl hover:text-brand-primary transition-colors break-all">
                          mhatretech0@gmail.com
                       </a>
                    </div>
@@ -230,11 +230,11 @@ export default function Home() {
 
                 <div className="flex gap-6">
                    <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/10 flex-shrink-0">
-                      <Instagram className="text-brand-orange" />
+                      <Instagram className="text-brand-primary" />
                    </div>
                    <div>
                       <div className="text-[10px] font-black uppercase tracking-widest opacity-50 mb-1">Social Media</div>
-                      <a href="https://instagram.com/mhatre_tech" target="_blank" rel="noreferrer" className="font-black text-2xl hover:text-brand-orange transition-colors">
+                      <a href="https://instagram.com/mhatre_tech" target="_blank" rel="noreferrer" className="font-black text-2xl hover:text-brand-primary transition-colors">
                          @mhatre_tech
                       </a>
                    </div>
@@ -244,7 +244,7 @@ export default function Home() {
               <div className="mt-12 pt-12 border-t border-white/10">
                  <a 
                    href="https://wa.me/917755909266" 
-                   className="flex items-center justify-center gap-3 bg-[#25D366] text-white py-5 rounded-2xl font-black text-sm hover:scale-[1.02] transition-transform"
+                   className="flex items-center justify-center gap-3 bg-[#25D366] text-white py-5 rounded-2xl font-black text-sm hover:scale-[1.02] transition-transform shadow-lg shadow-green-500/20"
                  >
                    <MessageCircle size={20} />
                    WhatsApp Us Now
@@ -280,9 +280,9 @@ export default function Home() {
                   href="https://www.google.com/maps/place/M+TECH+COMPUTER+INSTITUTE/@19.3589303,72.8570808,42m/data=!3m1!1e3!4m6!3m5!1s0x3be7af5e681d0a3d:0xf2e7501d3d456871!8m2!3d19.3589501!4d72.8571951!16s%2Fg%2F11vpnmsd9w"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-white text-brand-navy px-5 py-2.5 rounded-xl font-black text-xs shadow-2xl border border-slate-100"
+                  className="flex items-center gap-2 bg-white text-brand-navy px-5 py-2.5 rounded-xl font-black text-xs shadow-2xl border border-slate-100 hover:bg-brand-primary hover:text-white transition-colors"
                 >
-                  <Navigation size={14} className="text-brand-orange" />
+                  <Navigation size={14} className="text-brand-primary group-hover:text-white" />
                   Open in Maps
                 </a>
               </div>

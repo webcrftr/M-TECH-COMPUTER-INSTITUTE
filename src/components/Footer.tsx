@@ -16,19 +16,19 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link to="/" className="flex flex-col mb-6" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <span className="font-display text-2xl font-black text-brand-navy leading-none">M TECH</span>
-              <span className="text-[10px] font-black tracking-[0.2em] text-brand-orange uppercase">Computer Institute</span>
+              <span className="text-[10px] font-black tracking-[0.2em] text-brand-primary uppercase">Computer Institute</span>
             </Link>
             <p className="text-sm text-slate-500 leading-relaxed mb-8 font-medium">
               Empowering Naigaon with digital excellence for over 3+ years. Join 300+ students who have transformed their careers with us.
             </p>
             <div className="flex gap-3">
-              <a href="https://instagram.com/mhatre_tech" target="_blank" rel="noreferrer" className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 hover:bg-brand-orange hover:text-white transition-all shadow-sm">
+              <a href="https://instagram.com/mhatre_tech" target="_blank" rel="noreferrer" className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 hover:bg-brand-primary hover:text-white transition-all shadow-sm">
                 <Instagram size={18} />
               </a>
-              <a href="#" className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 hover:bg-brand-orange hover:text-white transition-all shadow-sm">
+              <a href="#" className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 hover:bg-brand-primary hover:text-white transition-all shadow-sm">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 hover:bg-brand-orange hover:text-white transition-all shadow-sm">
+              <a href="#" className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 hover:bg-brand-primary hover:text-white transition-all shadow-sm">
                 <Youtube size={18} />
               </a>
             </div>
@@ -41,7 +41,7 @@ export default function Footer() {
                 <li key={item}>
                   <button 
                     onClick={() => scrollToSection(item.toLowerCase())}
-                    className="text-sm font-bold text-slate-500 hover:text-brand-orange transition-colors"
+                    className="text-sm font-bold text-slate-500 hover:text-brand-primary transition-colors"
                   >
                     {item}
                   </button>
@@ -57,7 +57,7 @@ export default function Footer() {
                 <li key={item}>
                   <button 
                     onClick={() => scrollToSection('courses')}
-                    className="text-sm font-bold text-slate-500 hover:text-brand-orange transition-colors"
+                    className="text-sm font-bold text-slate-500 hover:text-brand-primary transition-colors"
                   >
                     {item}
                   </button>
@@ -75,23 +75,23 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="flex gap-4 group/footer-map"
               >
-                <MapPin size={18} className="text-brand-orange flex-shrink-0 group-hover/footer-map:scale-110 transition-transform" />
-                <p className="text-sm font-bold text-slate-500 leading-relaxed group-hover/footer-map:text-brand-orange transition-colors">
+                <MapPin size={18} className="text-brand-primary flex-shrink-0 group-hover/footer-map:scale-110 transition-transform" />
+                <p className="text-sm font-bold text-slate-500 leading-relaxed group-hover/footer-map:text-brand-primary transition-colors">
                   Don Bosco Rd, Opposite Ishan Hospital, Naigaon East, Vasai-Virar, Maharashtra 401208, India
                 </p>
               </a>
               <div className="flex gap-4">
-                <Phone size={18} className="text-brand-orange flex-shrink-0" />
+                <Phone size={18} className="text-brand-primary flex-shrink-0" />
                 <p className="text-sm font-bold text-slate-500">077559 09266</p>
               </div>
               <div className="flex gap-4">
-                <Mail size={18} className="text-brand-orange flex-shrink-0" />
-                <a href="mailto:mhatretech0@gmail.com" className="text-sm font-bold text-slate-500 hover:text-brand-orange transition-colors">mhatretech0@gmail.com</a>
+                <Mail size={18} className="text-brand-primary flex-shrink-0" />
+                <a href="mailto:mhatretech0@gmail.com" className="text-sm font-bold text-slate-500 hover:text-brand-primary transition-colors">mhatretech0@gmail.com</a>
               </div>
               <div className="mt-4 pt-4 border-t border-slate-100">
                  <div className="text-[10px] font-black text-brand-navy uppercase tracking-widest mb-2">Class Timing</div>
                  <div className="text-sm font-bold text-slate-500 flex items-center gap-2">
-                    <Clock size={14} className="text-brand-orange" />
+                    <Clock size={14} className="text-brand-primary" />
                     9:00 AM – 6:00 PM
                  </div>
               </div>
@@ -104,8 +104,8 @@ export default function Footer() {
             © 2026 M Tech Computer Institute • All Rights Reserved
           </p>
           <div className="flex gap-8">
-            <a href="#" className="text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-brand-orange transition-colors">Privacy Policy</a>
-            <a href="#" className="text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-brand-orange transition-colors">Terms of Service</a>
+            <a href="#" className="text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-brand-primary transition-colors">Privacy Policy</a>
+            <a href="#" className="text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-brand-primary transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

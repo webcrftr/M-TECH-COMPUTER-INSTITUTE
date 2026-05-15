@@ -44,7 +44,7 @@ export default function Gallery() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 bg-brand-orange/10 text-brand-orange px-4 py-2 rounded-2xl mb-4 border border-brand-orange/20"
+            className="inline-flex items-center gap-2 bg-brand-primary/10 text-brand-primary px-4 py-2 rounded-2xl mb-4 border border-brand-primary/20"
           >
             <Camera size={18} />
             <span className="text-xs font-black uppercase tracking-[0.2em]">Our Infrastructure</span>
@@ -143,7 +143,7 @@ export default function Gallery() {
         {/* Mini stats overlay / extra features */}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div className="bento-card flex items-center gap-4 bg-white/50">
-             <div className="w-12 h-12 bg-brand-orange/10 rounded-2xl flex items-center justify-center text-brand-orange">
+             <div className="w-12 h-12 bg-brand-primary/10 rounded-2xl flex items-center justify-center text-brand-primary text-brand-primary">
                 <ImageIcon size={24} />
              </div>
              <div>
@@ -152,7 +152,7 @@ export default function Gallery() {
              </div>
           </div>
           <div className="bento-card flex items-center gap-4 bg-white/50">
-             <div className="w-12 h-12 bg-brand-blue/10 rounded-2xl flex items-center justify-center text-brand-blue">
+             <div className="w-12 h-12 bg-brand-accent/10 rounded-2xl flex items-center justify-center text-brand-accent">
                 <ImageIcon size={24} />
              </div>
              <div>
@@ -161,7 +161,7 @@ export default function Gallery() {
              </div>
           </div>
           <div className="bento-card flex items-center gap-4 bg-white/50">
-             <div className="w-12 h-12 bg-brand-green/10 rounded-2xl flex items-center justify-center text-brand-green">
+             <div className="w-12 h-12 bg-brand-primary/10 rounded-2xl flex items-center justify-center text-brand-primary">
                 <ImageIcon size={24} />
              </div>
              <div>

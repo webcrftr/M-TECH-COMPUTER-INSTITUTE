@@ -12,11 +12,11 @@ export default function AboutPage() {
             animate={{ opacity: 1, x: 0 }}
             className="space-y-8"
           >
-            <div className="inline-block bg-brand-orange/10 text-brand-orange px-4 py-2 rounded-lg text-sm font-black uppercase tracking-widest">
+            <div className="inline-block bg-brand-primary/10 text-brand-primary px-4 py-2 rounded-lg text-sm font-black uppercase tracking-widest">
               Est. 2014
             </div>
             <h1 className="text-4xl md:text-6xl font-black text-brand-navy leading-tight">
-              A Legacy of <span className="text-brand-orange underline decoration-slate-200 underline-offset-8">Digital Growth</span> in Naigaon
+              A Legacy of <span className="text-brand-primary underline decoration-slate-200 underline-offset-8">Digital Growth</span> in Naigaon
             </h1>
             <p className="text-lg text-slate-500 leading-relaxed max-w-xl">
               M Tech Computer Institute was founded with a single mission: to bridge the digital divide in Naigaon East. We believe that professional computer education shouldn't be a luxury, but a gateway to a successful career.
@@ -49,7 +49,7 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-brand-navy/20"></div>
             </div>
             {/* Overlay badge */}
-            <div className="absolute -bottom-6 -left-6 bento-card accent-orange p-6 max-w-[200px] shadow-2xl">
+            <div className="absolute -bottom-6 -left-6 bento-card accent-primary p-6 max-w-[200px] shadow-2xl">
               <div className="text-2xl font-black mb-1">#1</div>
               <div className="text-[10px] font-bold uppercase tracking-widest">Ranked Tech Center in Naigaon East</div>
             </div>
@@ -76,7 +76,7 @@ export default function AboutPage() {
                   "Community-driven mentorship"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-sm font-bold text-brand-navy">
-                    <div className="w-2 h-2 bg-brand-orange rounded-full"></div>
+                    <div className="w-2 h-2 bg-brand-primary rounded-full"></div>
                     {item}
                   </li>
                 ))}
@@ -84,7 +84,7 @@ export default function AboutPage() {
             </div>
             
             <div className="bento-card accent-navy p-12 space-y-6">
-              <div className="w-16 h-16 bg-white/10 text-brand-orange rounded-2xl flex items-center justify-center shadow-inner border border-white/20">
+              <div className="w-16 h-16 bg-white/10 text-brand-accent rounded-2xl flex items-center justify-center shadow-inner border border-white/20">
                 <Eye size={32} />
               </div>
               <h2 className="text-3xl font-black text-white">Our Vision</h2>
@@ -93,11 +93,11 @@ export default function AboutPage() {
               </p>
               <div className="pt-10 grid grid-cols-2 gap-4">
                  <div className="bg-white/5 p-4 rounded-xl border border-white/10 text-center">
-                    <Milestone className="mx-auto mb-2 text-brand-orange" size={24} />
+                    <Milestone className="mx-auto mb-2 text-brand-accent" size={24} />
                     <div className="text-[10px] uppercase font-bold tracking-widest">Quality Standards</div>
                  </div>
                  <div className="bg-white/5 p-4 rounded-xl border border-white/10 text-center">
-                    <Users2 className="mx-auto mb-2 text-brand-orange" size={24} />
+                    <Users2 className="mx-auto mb-2 text-brand-accent" size={24} />
                     <div className="text-[10px] uppercase font-bold tracking-widest">Student Growth</div>
                  </div>
               </div>
@@ -110,7 +110,7 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 py-24">
         <div className="max-w-4xl mx-auto bento-card border-none bg-white p-12 text-center md:text-left md:flex items-center gap-12">
           <div className="md:w-1/3 mb-8 md:mb-0">
-             <div className="w-48 h-48 mx-auto bg-slate-200 rounded-full border-4 border-brand-orange overflow-hidden">
+             <div className="w-48 h-48 mx-auto bg-slate-200 rounded-full border-4 border-brand-primary overflow-hidden">
                 <img 
                   src="https://picsum.photos/seed/founder/400/400" 
                   alt="Founder" 
@@ -120,7 +120,7 @@ export default function AboutPage() {
              </div>
           </div>
           <div className="md:w-2/3 space-y-6">
-             <div className="text-brand-orange font-black text-xs uppercase tracking-[0.3em] font-display">Founder's Message</div>
+             <div className="text-brand-primary font-black text-xs uppercase tracking-[0.3em] font-display">Founder's Message</div>
              <p className="text-xl font-bold text-brand-navy leading-relaxed italic">
                "We don't just teach courses; we build careers. Seeing our students get placed in top companies is our biggest achievement."
              </p>

@@ -23,13 +23,13 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <div className="bento-card bg-[#FFF9F2] border-[#FFE4C4]">
+    <div className="bento-card bg-brand-light/20 border-brand-light">
       <div className="flex gap-1 mb-4 text-yellow-400">
         {[1, 2, 3, 4, 5].map(i => <Star key={i} size={14} fill="currentColor" />)}
       </div>
       
       <div className="relative">
-        <Quote className="absolute -top-2 -left-2 text-brand-orange/20" size={32} />
+        <Quote className="absolute -top-2 -left-2 text-brand-primary/20" size={32} />
         <p className="italic text-sm text-slate-700 leading-relaxed pl-6">
           "{testimonials[1].text}"
         </p>

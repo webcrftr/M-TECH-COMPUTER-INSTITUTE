@@ -18,13 +18,13 @@ const courses = [
     title: "Advanced Excel",
     duration: "30 Hours",
     desc: "Professional data analysis, complex formulas, and dashboard automation.",
-    icon: <FileSpreadsheet className="text-green-500" />,
+    icon: <FileSpreadsheet className="text-emerald-500" />,
   },
   {
     title: "Advanced Tally + GST",
     duration: "60 Hours",
     desc: "Master accounting with TallyPrime including GST, TDS & industry practices.",
-    icon: <Calculator className="text-orange-500" />,
+    icon: <Calculator className="text-blue-600" />,
   },
   {
     title: "Full Stack Development",
@@ -79,31 +79,31 @@ export default function Courses() {
             viewport={{ once: true }}
             transition={{ delay: idx * 0.05 }}
             whileHover={{ y: -8 }}
-            className="group relative bg-white rounded-[40px] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 overflow-hidden flex flex-col transition-all duration-500 hover:shadow-[0_20px_50px_rgba(249,115,22,0.1)]"
+            className="group relative bg-white rounded-[40px] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 overflow-hidden flex flex-col transition-all duration-500 hover:shadow-[0_20px_50px_rgba(37,99,235,0.1)]"
           >
             {/* Gradient Border Effect on Hover */}
-            <div className="absolute inset-0 border-2 border-transparent group-hover:border-brand-orange/20 rounded-[40px] transition-all pointer-events-none"></div>
+            <div className="absolute inset-0 border-2 border-transparent group-hover:border-brand-primary/20 rounded-[40px] transition-all pointer-events-none"></div>
             
             {/* Badge */}
             {course.badge && (
               <div className="absolute top-6 right-6">
-                <span className="bg-brand-orange text-white text-[9px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg shadow-brand-orange/20">
+                <span className="bg-brand-primary text-white text-[9px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg shadow-brand-primary/20">
                   {course.badge}
                 </span>
               </div>
             )}
 
-            <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-orange/5 transition-colors relative">
-               <div className="absolute inset-0 bg-brand-orange/20 blur-xl opacity-0 group-hover:opacity-40 transition-opacity"></div>
+            <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-primary/5 transition-colors relative">
+               <div className="absolute inset-0 bg-brand-primary/20 blur-xl opacity-0 group-hover:opacity-40 transition-opacity"></div>
                <div className="relative z-10">{course.icon}</div>
             </div>
 
-            <h3 className="font-black text-2xl text-brand-navy mb-2 group-hover:text-brand-orange transition-colors">
+            <h3 className="font-black text-2xl text-brand-navy mb-2 group-hover:text-brand-primary transition-colors">
               {course.title}
             </h3>
             
             <div className="inline-flex items-center gap-2 bg-slate-100 px-3 py-1 rounded-full w-fit mb-6">
-               <div className="w-1.5 h-1.5 rounded-full bg-brand-orange animate-pulse"></div>
+               <div className="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse"></div>
                <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest leading-none">
                  {course.duration}
                </span>
@@ -128,7 +128,7 @@ export default function Courses() {
               href={`https://wa.me/917755909266?text=${encodeURIComponent(`Hello M Tech Computer Institute, I want to enquire about the ${course.title} course.`)}`}
               target="_blank"
               rel="noreferrer"
-              className="w-full bg-brand-navy text-white text-xs font-black py-5 rounded-2xl transition-all uppercase tracking-[0.2em] shadow-xl shadow-brand-navy/10 hover:bg-brand-orange hover:shadow-brand-orange/20 active:scale-95 flex items-center justify-center gap-2"
+              className="w-full bg-brand-navy text-white text-xs font-black py-5 rounded-2xl transition-all uppercase tracking-[0.2em] shadow-xl shadow-brand-navy/10 hover:bg-brand-primary hover:shadow-brand-primary/20 active:scale-95 flex items-center justify-center gap-2"
             >
               Enroll Now <ArrowRight size={14} />
             </a>
@@ -143,11 +143,11 @@ export default function Courses() {
         viewport={{ once: true }}
         className="bento-card accent-navy mt-8 p-10 relative overflow-hidden"
       >
-        <div className="absolute top-0 right-0 w-64 h-64 bg-brand-orange/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-6">
              <div className="p-5 bg-white/10 rounded-3xl border border-white/10 shadow-inner">
-                <Terminal className="text-brand-orange" size={32} />
+                <Terminal className="text-brand-accent" size={32} />
              </div>
              <div>
                 <h3 className="font-black text-2xl mb-1">Modern Coding Hub</h3>
@@ -157,7 +157,7 @@ export default function Courses() {
           
           <div className="flex flex-wrap gap-3 justify-center">
             {codingCourses.map((skill, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 px-6 py-3 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-brand-orange hover:border-brand-orange transition-all cursor-default shadow-lg">
+              <div key={i} className="bg-white/5 border border-white/10 px-6 py-3 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-brand-primary hover:border-brand-primary transition-all cursor-default shadow-lg">
                 {skill}
               </div>
             ))}

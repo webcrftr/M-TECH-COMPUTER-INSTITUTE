@@ -4,32 +4,32 @@ import { motion } from 'motion/react';
 const reasons = [
   {
     title: "Practical Training",
-    icon: <MousePointer2 className="text-orange-500" />,
+    icon: <MousePointer2 className="text-brand-primary" />,
     desc: "Hands-on learning with real-world projects and live assignments."
   },
   {
     title: "Experienced Teachers",
-    icon: <UserCheck className="text-blue-500" />,
+    icon: <UserCheck className="text-brand-accent" />,
     desc: "Professional trainers with years of industry experience to guide you."
   },
   {
     title: "Job-Oriented Courses",
-    icon: <Briefcase className="text-green-500" />,
+    icon: <Briefcase className="text-emerald-500" />,
     desc: "Curriculum designed strictly according to current market demands."
   },
   {
     title: "Flexible Timings",
-    icon: <Clock className="text-purple-500" />,
+    icon: <Clock className="text-indigo-500" />,
     desc: "Batches from 9:00 AM to 6:00 PM to suit your busy schedule."
   },
   {
     title: "Friendly Environment",
-    icon: <Heart className="text-red-500" />,
+    icon: <Heart className="text-rose-500" />,
     desc: "Supportive learning atmosphere where students can grow comfortably."
   },
   {
     title: "Affordable Fees",
-    icon: <IndianRupee className="text-yellow-600" />,
+    icon: <IndianRupee className="text-brand-primary" />,
     desc: "Quality education at a price that fits your budget perfectly."
   }
 ];

@@ -5,8 +5,8 @@ export default function VideoSection() {
   return (
     <section id="tour" className="py-24 bg-brand-navy relative overflow-hidden">
       {/* Decorative background elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-brand-orange/10 rounded-full blur-[120px] -mr-48 -mt-48"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-blue/10 rounded-full blur-[120px] -ml-48 -mb-48"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/10 rounded-full blur-[120px] -mr-48 -mt-48"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-accent/10 rounded-full blur-[120px] -ml-48 -mb-48"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-16">
@@ -14,7 +14,7 @@ export default function VideoSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-brand-orange px-4 py-2 rounded-2xl mb-4 border border-white/10"
+            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-brand-primary px-4 py-2 rounded-2xl mb-4 border border-white/10"
           >
             <Tv size={18} />
             <span className="text-xs font-black uppercase tracking-[0.2em]">Institute Tour</span>
@@ -44,11 +44,11 @@ export default function VideoSection() {
           */}
           <div className="absolute top-8 left-8 flex gap-4 pointer-events-none z-20">
             <div className="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl flex items-center gap-2">
-              <ShieldCheck size={16} className="text-brand-orange" />
+              <ShieldCheck size={16} className="text-brand-primary" />
               <span className="text-[10px] font-black text-white uppercase tracking-widest">Premium Facility</span>
             </div>
             <div className="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl flex items-center gap-2">
-              <Sparkles size={16} className="text-brand-orange" />
+              <Sparkles size={16} className="text-brand-primary" />
               <span className="text-[10px] font-black text-white uppercase tracking-widest">Modern Setup</span>
             </div>
           </div>

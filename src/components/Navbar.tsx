@@ -56,7 +56,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="bg-brand-orange text-white py-2 text-center text-[10px] font-black uppercase tracking-[0.2em] sticky top-0 z-[110] flex items-center justify-center gap-4 px-4 overflow-hidden whitespace-nowrap">
+      <div className="bg-brand-primary text-white py-2 text-center text-[10px] font-black uppercase tracking-[0.2em] sticky top-0 z-[110] flex items-center justify-center gap-4 px-4 overflow-hidden whitespace-nowrap bg-gradient-to-r from-brand-primary via-brand-accent to-brand-primary">
         <span className="animate-pulse">● Admissions Open</span>
         <span className="hidden sm:inline">Classes Running Daily</span>
         <span className="bg-white/20 px-3 py-0.5 rounded-full backdrop-blur-md">Timing: 9:00 AM – 6:00 PM</span>
@@ -72,7 +72,7 @@ export default function Navbar() {
         }`}>
           <Link to="/" className="flex flex-col" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <span className="font-display text-2xl font-black text-brand-navy leading-none">M TECH</span>
-            <span className="text-[10px] font-black tracking-[0.2em] text-brand-orange uppercase">Computer Institute</span>
+            <span className="text-[10px] font-black tracking-[0.2em] text-brand-primary uppercase">Computer Institute</span>
           </Link>
           
           {/* Desktop Links */}
@@ -83,7 +83,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
                 className={`text-[11px] font-black uppercase tracking-widest transition-all ${
-                  activeSection === link.id ? 'text-brand-orange scale-110' : 'text-slate-500 hover:text-brand-orange'
+                  activeSection === link.id ? 'text-brand-primary scale-110' : 'text-slate-500 hover:text-brand-primary'
                 }`}
               >
                 {link.title}
@@ -135,7 +135,7 @@ export default function Navbar() {
               <div className="mt-8">
                 <a 
                   href="tel:07755909266" 
-                  className="flex items-center justify-center gap-3 bg-brand-orange text-white px-6 py-5 rounded-[24px] text-lg font-black uppercase tracking-widest shadow-2xl"
+                  className="flex items-center justify-center gap-3 bg-brand-primary text-white px-6 py-5 rounded-[24px] text-lg font-black uppercase tracking-widest shadow-2xl"
                 >
                   <Phone size={24} />
                   Book Now
