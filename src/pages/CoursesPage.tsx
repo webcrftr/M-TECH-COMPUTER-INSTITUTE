@@ -1,4 +1,4 @@
-import { Monitor, BookOpen, Code, FileSpreadsheet, Calculator, GraduationCap, Clock, CheckCircle2, Award } from 'lucide-react';
+import { Monitor, BookOpen, Code, FileSpreadsheet, Calculator, Clock, CheckCircle2, Award } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
@@ -38,15 +38,6 @@ const detailedCourses = [
     skills: ["HTML & CSS", "JavaScript", "React JS", "Node.js", "MongoDB", "Express.js"],
     icon: <Code className="text-purple-500" />,
     color: "bg-purple-50"
-  },
-  {
-    title: "Board Exam Preparation",
-    hindi: "परीक्षा तयारी बँचेस",
-    duration: "Academic Session",
-    desc: "Special guidance and computer education support for school and college students preparing for board exams.",
-    skills: ["Personal Attention", "Practical Learning", "Exam Guidance", "Doubt Solving"],
-    icon: <GraduationCap className="text-brand-accent" />,
-    color: "bg-brand-light"
   }
 ];
 

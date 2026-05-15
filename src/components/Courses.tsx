@@ -1,4 +1,4 @@
-import { Monitor, BookOpen, Code, FileSpreadsheet, Calculator, GraduationCap, ArrowRight, Video, Palette, Terminal, Globe, Megaphone, Smartphone, CheckCircle2 } from 'lucide-react';
+import { Monitor, BookOpen, Code, FileSpreadsheet, Calculator, ArrowRight, Video, Palette, Terminal, Globe, Megaphone, Smartphone, CheckCircle2 } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const courses = [
@@ -45,14 +45,6 @@ const courses = [
     duration: "2 Months",
     desc: "Professional video production using Premiere Pro and After Effects.",
     icon: <Video className="text-red-500" />,
-  },
-  {
-    title: "Board Exam Preparation",
-    duration: "Flexible",
-    desc: "Special guidance for students preparing for computer-related board exams.",
-    icon: <GraduationCap className="text-purple-500" />,
-    badge: "Student Support",
-    features: ["Personal Attention", "Exam Guidance", "Doubt Solving"]
   },
 ];
 
